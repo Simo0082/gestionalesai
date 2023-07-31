@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.18/af-2.3.3/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/datatables.css"/>
+ 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.18/af-2.3.3/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/datatables.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+<h2>PIATTAFORMA SAS - Report Giornaliero Prenotazioni del <script> document.write(new Date().toLocaleDateString()); </script></h2>
+  <table id="my-example">
+    <thead>
+      <tr>
+          <th>Id</th>
+          <th>Nome Risorsa</th>
+          <th>Tipo Risorsa</th>
+	  <th>Capienza Massima</th>
+	  <th>Posti Occupati</th>
+	  <th>Posti Liberi</th>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+
+</body>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#my-example').dataTable({
+	
+	"language": {
+                "url": "dataTables.ita.lang"
+            },        
+
+	"bProcessing": true,
+        "sAjaxSource": "booking_report.php",
+        "aoColumns": [
+              	{ mData: 'id' } ,
+              	{ mData: 'resource_name' },
+              	{ mData: 'resource_type' },
+		{ mData: 'max_size' },
+		{ mData: 'booked' },
+		{ mData: 'free' }
+		
+
+            ],
+	"dom": 'Bfrtip',
+	"buttons": [
+            'print',
+	    'excel'
+        
+	],
+	"slect": true
+	            
+      });  
+  });
+</script>
+</html>

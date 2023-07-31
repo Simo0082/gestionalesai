@@ -1,0 +1,5 @@
+<?php   
+
+$output =  shell_exec('/usr/local/bin/aws rekognition search-faces-by-image --image-byte fileb://uploads/nicole.jpg  --collection-id "facecollection" 2>&1');
+echo $output;
+?>
