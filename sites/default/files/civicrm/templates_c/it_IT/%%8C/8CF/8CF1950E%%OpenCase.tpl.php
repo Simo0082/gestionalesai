@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-18 21:49:25
+<?php /* Smarty version 2.6.31, created on 2023-09-26 11:40:04
          compiled from CRM/Case/Form/Activity/OpenCase.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Case/Form/Activity/OpenCase.tpl', 1, false),array('function', 'help', 'CRM/Case/Form/Activity/OpenCase.tpl', 28, false),array('function', 'crmAPI', 'CRM/Case/Form/Activity/OpenCase.tpl', 52, false),array('modifier', 'json_encode', 'CRM/Case/Form/Activity/OpenCase.tpl', 59, false),)), $this); ?>

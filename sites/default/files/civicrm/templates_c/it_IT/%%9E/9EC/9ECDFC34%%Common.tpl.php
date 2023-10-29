@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-22 23:00:04
+<?php /* Smarty version 2.6.31, created on 2023-09-26 11:40:53
          compiled from CRM/Case/Form/Search/Common.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Case/Form/Search/Common.tpl', 1, false),array('block', 'ts', 'CRM/Case/Form/Search/Common.tpl', 42, false),)), $this); ?>

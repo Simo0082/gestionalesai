@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-16 18:23:33
+<?php /* Smarty version 2.6.31, created on 2023-09-20 21:45:42
          compiled from CRM/Admin/Form/Navigation.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Admin/Form/Navigation.tpl', 1, false),array('function', 'help', 'CRM/Admin/Form/Navigation.tpl', 34, false),)), $this); ?>

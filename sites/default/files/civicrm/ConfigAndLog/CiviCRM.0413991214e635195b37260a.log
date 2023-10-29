@@ -1,108 +1,250 @@
-Jul 18 21:55:12  [info] 
+Oct 03 15:25:50  [warning] Deprecated function CRM_Core_OptionGroup::getLabel, use CRM_Core_PseudoConstant::getLabel.
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 12 15:22:57  [info] $Fatal Error Details = Array
+(
+    [message] => Il tipo di relazione Senior Services Coordinator, trovata nel file di configurazione del caso, non è presente nel database <a href="https://docs.civicrm.org/user/en/stable/case-management/set-up"  target="_blank" class="crm-doc-link no-popup" title="Apre la documentazione in una nuova finestra.">(learn Altro...)</a>
+    [code] => 
+)
+
+
+Oct 12 15:22:57  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(223): CRM_Core_Error::fatal("Il tipo di relazione Senior Services Coordinator, trovata nel file di configu...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(109): CRM_Case_XMLProcessor_Process->createRelationships("Senior Services Coordinator", (Array:13))
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(59): CRM_Case_XMLProcessor_Process->process(Object(SimpleXMLElement), (Array:13))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Activity/OpenCase.php(340): CRM_Case_XMLProcessor_Process->run("presa_in_carico", (Array:13))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Case.php(401): CRM_Case_Form_Activity_OpenCase::endPostProcess(Object(CRM_Case_Form_Case), (Array:26))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(489): CRM_Case_Form_Case->postProcess()
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Case_Form_Case), "upload")
+#9 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Case_Form_Case), "upload")
+#10 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_Case), "upload")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Case_Form_Case", "Apri caso", (Array:0))
+#14 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#15 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#16 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#17 /var/www/html/includes/menu.inc(527): civicrm_invoke("case", "add")
+#18 /var/www/html/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 17 14:15:08  [warning] Deprecated function CRM_Core_OptionGroup::getLabel, use CRM_Core_PseudoConstant::getLabel.
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 18 09:50:09  [warning] Deprecated function CRM_Core_OptionGroup::getLabel, use CRM_Core_PseudoConstant::getLabel.
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 18 10:18:34  [warning] Deprecated function CRM_Core_OptionGroup::getLabel, use CRM_Core_PseudoConstant::getLabel.
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 18 10:26:15  [info] $Fatal Error Details = Array
+(
+    [message] => Il tipo di relazione Senior Services Coordinator, trovata nel file di configurazione del caso, non è presente nel database <a href="https://docs.civicrm.org/user/en/stable/case-management/set-up"  target="_blank" class="crm-doc-link no-popup" title="Apre la documentazione in una nuova finestra.">(learn Altro...)</a>
+    [code] => 
+)
+
+
+Oct 18 10:26:15  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(223): CRM_Core_Error::fatal("Il tipo di relazione Senior Services Coordinator, trovata nel file di configu...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(109): CRM_Case_XMLProcessor_Process->createRelationships("Senior Services Coordinator", (Array:13))
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(59): CRM_Case_XMLProcessor_Process->process(Object(SimpleXMLElement), (Array:13))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Activity/OpenCase.php(340): CRM_Case_XMLProcessor_Process->run("presa_in_carico", (Array:13))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Case.php(401): CRM_Case_Form_Activity_OpenCase::endPostProcess(Object(CRM_Case_Form_Case), (Array:26))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(489): CRM_Case_Form_Case->postProcess()
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Case_Form_Case), "upload")
+#9 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Case_Form_Case), "upload")
+#10 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_Case), "upload")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Case_Form_Case", "Apri caso", (Array:0))
+#14 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#15 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#16 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#17 /var/www/html/includes/menu.inc(527): civicrm_invoke("case", "add")
+#18 /var/www/html/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 27 21:36:05  [info] 
 $Fatal Error Details = array(3) {
   ["message"]=>
-  string(51) "'booking' is not a valid option for field parent_id"
+  string(14) "Invalid Filter"
   ["code"]=>
   NULL
   ["exception"]=>
-  object(CiviCRM_API3_Exception)#294 (8) {
-    ["extraParams":"CiviCRM_API3_Exception":private]=>
-    array(6) {
-      ["error_field"]=>
-      string(9) "parent_id"
+  object(CRM_Core_Exception)#119 (10) {
+    ["errorData":"CRM_Core_Exception":private]=>
+    array(1) {
       ["error_code"]=>
-      int(2001)
-      ["entity"]=>
-      string(10) "Navigation"
-      ["action"]=>
-      string(3) "get"
-      ["is_error"]=>
-      int(1)
-      ["error_message"]=>
-      string(51) "'booking' is not a valid option for field parent_id"
+      int(0)
     }
+    ["cause":protected]=>
+    NULL
+    ["_trace":"PEAR_Exception":private]=>
+    NULL
     ["message":protected]=>
-    string(51) "'booking' is not a valid option for field parent_id"
+    string(14) "Invalid Filter"
     ["string":"Exception":private]=>
     string(0) ""
     ["code":protected]=>
     int(0)
     ["file":protected]=>
-    string(51) "/var/www/html/sites/all/modules/civicrm/api/api.php"
+    string(68) "/var/www/html/sites/all/modules/civicrm/CRM/Core/BAO/CustomGroup.php"
     ["line":protected]=>
-    int(45)
+    int(703)
     ["trace":"Exception":private]=>
-    array(24) {
+    array(9) {
       [0]=>
-      array(4) {
+      array(6) {
         ["file"]=>
-        string(102) "/var/www/html/sites/default/files/civicrm/ext/uk.co.compucorp.civicrm.booking/CRM/Booking/Upgrader.php"
+        string(68) "/var/www/html/sites/all/modules/civicrm/CRM/Core/BAO/CustomGroup.php"
         ["line"]=>
-        int(160)
+        int(483)
         ["function"]=>
-        string(12) "civicrm_api3"
+        string(23) "validateSubTypeByEntity"
+        ["class"]=>
+        string(24) "CRM_Core_BAO_CustomGroup"
+        ["type"]=>
+        string(2) "::"
         ["args"]=>
-        array(3) {
+        array(2) {
           [0]=>
-          string(10) "Navigation"
+          string(10) "Individual"
           [1]=>
-          string(3) "get"
-          [2]=>
-          array(5) {
-            ["sequential"]=>
-            int(1)
-            ["name"]=>
-            array(1) {
-              ["IN"]=>
-              array(2) {
-                [0]=>
-                string(11) "new_booking"
-                [1]=>
-                string(8) "day_view"
-              }
-            }
-            ["parent_id"]=>
-            string(7) "booking"
-            ["api.Navigation.create"]=>
-            array(2) {
-              ["id"]=>
-              string(9) "$value.id"
-              ["is_active"]=>
-              int(0)
-            }
-            ["version"]=>
-            int(3)
-          }
+          string(7) "Student"
         }
       }
       [1]=>
       array(6) {
         ["file"]=>
-        string(102) "/var/www/html/sites/default/files/civicrm/ext/uk.co.compucorp.civicrm.booking/CRM/Booking/Upgrader.php"
+        string(73) "/var/www/html/sites/all/modules/civicrm/CRM/Contact/Page/View/Summary.php"
         ["line"]=>
-        int(129)
+        int(63)
         ["function"]=>
-        string(23) "toggleIsActiveMenuItems"
+        string(7) "getTree"
         ["class"]=>
-        string(20) "CRM_Booking_Upgrader"
+        string(24) "CRM_Core_BAO_CustomGroup"
         ["type"]=>
-        string(2) "->"
+        string(2) "::"
         ["args"]=>
-        array(1) {
+        array(5) {
           [0]=>
-          int(0)
+          string(10) "Individual"
+          [1]=>
+          array(2) {
+            ["custom_field"]=>
+            array(19) {
+              [0]=>
+              string(2) "id"
+              [1]=>
+              string(4) "name"
+              [2]=>
+              string(5) "label"
+              [3]=>
+              string(11) "column_name"
+              [4]=>
+              string(9) "data_type"
+              [5]=>
+              string(9) "html_type"
+              [6]=>
+              string(13) "default_value"
+              [7]=>
+              string(10) "attributes"
+              [8]=>
+              string(11) "is_required"
+              [9]=>
+              string(7) "is_view"
+              [10]=>
+              string(8) "help_pre"
+              [11]=>
+              string(9) "help_post"
+              [12]=>
+              string(16) "options_per_line"
+              [13]=>
+              string(16) "start_date_years"
+              [14]=>
+              string(14) "end_date_years"
+              [15]=>
+              string(11) "date_format"
+              [16]=>
+              string(11) "time_format"
+              [17]=>
+              string(15) "option_group_id"
+              [18]=>
+              string(11) "in_selector"
+            }
+            ["custom_group"]=>
+            array(14) {
+              [0]=>
+              string(2) "id"
+              [1]=>
+              string(4) "name"
+              [2]=>
+              string(10) "table_name"
+              [3]=>
+              string(5) "title"
+              [4]=>
+              string(8) "help_pre"
+              [5]=>
+              string(9) "help_post"
+              [6]=>
+              string(16) "collapse_display"
+              [7]=>
+              string(5) "style"
+              [8]=>
+              string(11) "is_multiple"
+              [9]=>
+              string(7) "extends"
+              [10]=>
+              string(24) "extends_entity_column_id"
+              [11]=>
+              string(27) "extends_entity_column_value"
+              [12]=>
+              string(12) "max_multiple"
+              [13]=>
+              string(9) "is_public"
+            }
+          }
+          [2]=>
+          int(12299)
+          [3]=>
+          NULL
+          [4]=>
+          array(1) {
+            [0]=>
+            string(7) "Student"
+          }
         }
       }
       [2]=>
       array(6) {
         ["file"]=>
-        string(107) "/var/www/html/sites/default/files/civicrm/ext/uk.co.compucorp.civicrm.booking/CRM/Booking/Upgrader/Base.php"
+        string(73) "/var/www/html/sites/all/modules/civicrm/CRM/Contact/Page/View/Summary.php"
         ["line"]=>
-        int(264)
+        int(87)
         ["function"]=>
-        string(7) "disable"
+        string(10) "preProcess"
         ["class"]=>
-        string(20) "CRM_Booking_Upgrader"
+        string(29) "CRM_Contact_Page_View_Summary"
         ["type"]=>
         string(2) "->"
         ["args"]=>
@@ -112,2954 +254,13 @@ $Fatal Error Details = array(3) {
       [3]=>
       array(6) {
         ["file"]=>
-        string(95) "/var/www/html/sites/default/files/civicrm/ext/uk.co.compucorp.civicrm.booking/booking.civix.php"
-        ["line"]=>
-        int(153)
-        ["function"]=>
-        string(9) "onDisable"
-        ["class"]=>
-        string(25) "CRM_Booking_Upgrader_Base"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(0) {
-        }
-      }
-      [4]=>
-      array(4) {
-        ["file"]=>
-        string(89) "/var/www/html/sites/default/files/civicrm/ext/uk.co.compucorp.civicrm.booking/booking.php"
-        ["line"]=>
-        int(85)
-        ["function"]=>
-        string(30) "_booking_civix_civicrm_disable"
-        ["args"]=>
-        array(0) {
-        }
-      }
-      [5]=>
-      array(4) {
-        ["file"]=>
-        string(72) "/var/www/html/sites/all/modules/civicrm/CRM/Extension/Manager/Module.php"
-        ["line"]=>
-        int(76)
-        ["function"]=>
-        string(23) "booking_civicrm_disable"
-        ["args"]=>
-        array(0) {
-        }
-      }
-      [6]=>
-      array(6) {
-        ["file"]=>
-        string(72) "/var/www/html/sites/all/modules/civicrm/CRM/Extension/Manager/Module.php"
-        ["line"]=>
-        int(100)
-        ["function"]=>
-        string(8) "callHook"
-        ["class"]=>
-        string(28) "CRM_Extension_Manager_Module"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(2) {
-          [0]=>
-          object(CRM_Extension_Info)#171 (18) {
-            ["key"]=>
-            string(31) "uk.co.compucorp.civicrm.booking"
-            ["type"]=>
-            string(6) "module"
-            ["name"]=>
-            string(11) "CiviBooking"
-            ["label"]=>
-            string(11) "CiviBooking"
-            ["file"]=>
-            string(7) "booking"
-            ["classloader"]=>
-            array(0) {
-            }
-            ["requires"]=>
-            array(0) {
-            }
-            ["description"]=>
-            string(136) "A CMS independent extension to allow organisations to manage a group of resources (i.e. rooms) offering these to constituents for a fee."
-            ["license"]=>
-            string(89) "the GNU Affero General Public License 3 (GNU AGPL 3) and the CiviCRM Licensing Exception."
-            ["maintainer"]=>
-            array(2) {
-              ["author"]=>
-              string(45) "Erawat Chamanont, Jamie Novick, Guanhuan Chen"
-              ["email"]=>
-              string(47) "jamie@compucorpc.o.uk, guanhuan@compucorp.co.uk"
-            }
-            ["urls"]=>
-            array(4) {
-              ["Documentation"]=>
-              string(40) "https://github.com/compucorp/civibooking"
-              ["Licensing"]=>
-              string(28) "http://civicrm.org/licensing"
-              ["Main Extension Page"]=>
-              string(41) "http://civicrm.org/extensions/civibooking"
-              ["Support"]=>
-              string(23) "support@compucorp.co.uk"
-            }
-            ["documentation"]=>
-            string(0) ""
-            ["releaseDate"]=>
-            string(10) "2018-12-12"
-            ["version"]=>
-            string(5) "1.5.3"
-            ["develStage"]=>
-            string(6) "stable"
-            ["compatibility"]=>
-            array(1) {
-              ["ver"]=>
-              array(2) {
-                [0]=>
-                string(3) "4.6"
-                [1]=>
-                string(3) "4.7"
-              }
-            }
-            ["comments"]=>
-            string(0) ""
-            ["civix"]=>
-            array(1) {
-              ["namespace"]=>
-              string(11) "CRM/Booking"
-            }
-          }
-          [1]=>
-          string(7) "disable"
-        }
-      }
-      [7]=>
-      array(6) {
-        ["file"]=>
-        string(65) "/var/www/html/sites/all/modules/civicrm/CRM/Extension/Manager.php"
-        ["line"]=>
-        int(316)
-        ["function"]=>
-        string(12) "onPreDisable"
-        ["class"]=>
-        string(28) "CRM_Extension_Manager_Module"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(1) {
-          [0]=>
-          object(CRM_Extension_Info)#171 (18) {
-            ["key"]=>
-            string(31) "uk.co.compucorp.civicrm.booking"
-            ["type"]=>
-            string(6) "module"
-            ["name"]=>
-            string(11) "CiviBooking"
-            ["label"]=>
-            string(11) "CiviBooking"
-            ["file"]=>
-            string(7) "booking"
-            ["classloader"]=>
-            array(0) {
-            }
-            ["requires"]=>
-            array(0) {
-            }
-            ["description"]=>
-            string(136) "A CMS independent extension to allow organisations to manage a group of resources (i.e. rooms) offering these to constituents for a fee."
-            ["license"]=>
-            string(89) "the GNU Affero General Public License 3 (GNU AGPL 3) and the CiviCRM Licensing Exception."
-            ["maintainer"]=>
-            array(2) {
-              ["author"]=>
-              string(45) "Erawat Chamanont, Jamie Novick, Guanhuan Chen"
-              ["email"]=>
-              string(47) "jamie@compucorpc.o.uk, guanhuan@compucorp.co.uk"
-            }
-            ["urls"]=>
-            array(4) {
-              ["Documentation"]=>
-              string(40) "https://github.com/compucorp/civibooking"
-              ["Licensing"]=>
-              string(28) "http://civicrm.org/licensing"
-              ["Main Extension Page"]=>
-              string(41) "http://civicrm.org/extensions/civibooking"
-              ["Support"]=>
-              string(23) "support@compucorp.co.uk"
-            }
-            ["documentation"]=>
-            string(0) ""
-            ["releaseDate"]=>
-            string(10) "2018-12-12"
-            ["version"]=>
-            string(5) "1.5.3"
-            ["develStage"]=>
-            string(6) "stable"
-            ["compatibility"]=>
-            array(1) {
-              ["ver"]=>
-              array(2) {
-                [0]=>
-                string(3) "4.6"
-                [1]=>
-                string(3) "4.7"
-              }
-            }
-            ["comments"]=>
-            string(0) ""
-            ["civix"]=>
-            array(1) {
-              ["namespace"]=>
-              string(11) "CRM/Booking"
-            }
-          }
-        }
-      }
-      [8]=>
-      array(6) {
-        ["file"]=>
-        string(69) "/var/www/html/sites/all/modules/civicrm/CRM/Admin/Form/Extensions.php"
-        ["line"]=>
-        int(200)
-        ["function"]=>
-        string(7) "disable"
-        ["class"]=>
-        string(21) "CRM_Extension_Manager"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(1) {
-          [0]=>
-          array(1) {
-            [0]=>
-            string(31) "uk.co.compucorp.civicrm.booking"
-          }
-        }
-      }
-      [9]=>
-      array(6) {
-        ["file"]=>
-        string(57) "/var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php"
-        ["line"]=>
-        int(489)
-        ["function"]=>
-        string(11) "postProcess"
-        ["class"]=>
-        string(25) "CRM_Admin_Form_Extensions"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(0) {
-        }
-      }
-      [10]=>
-      array(6) {
-        ["file"]=>
-        string(65) "/var/www/html/sites/all/modules/civicrm/CRM/Core/StateMachine.php"
-        ["line"]=>
-        int(160)
-        ["function"]=>
-        string(11) "mainProcess"
-        ["class"]=>
-        string(13) "CRM_Core_Form"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(0) {
-        }
-      }
-      [11]=>
-      array(6) {
-        ["file"]=>
-        string(74) "/var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Next.php"
-        ["line"]=>
-        int(61)
-        ["function"]=>
-        string(7) "perform"
-        ["class"]=>
-        string(21) "CRM_Core_StateMachine"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(3) {
-          [0]=>
-          &object(CRM_Admin_Form_Extensions)#145 (47) {
-            ["_id":protected]=>
-            NULL
-            ["_values":protected]=>
-            array(0) {
-            }
-            ["_BAOName":protected]=>
-            string(22) "CRM_Core_BAO_Extension"
-            ["_state":protected]=>
-            NULL
-            ["_name":protected]=>
-            string(10) "Extensions"
-            ["_title":protected]=>
-            NULL
-            ["_defaults"]=>
-            array(0) {
-            }
-            ["_options"]=>
-            NULL
-            ["_action"]=>
-            int(64)
-            ["_paymentProcessors":protected]=>
-            NULL
-            ["_paymentProcessorIDs"]=>
-            NULL
-            ["_paymentProcessorID":protected]=>
-            NULL
-            ["_is_pay_later_enabled":protected]=>
-            NULL
-            ["_renderer":protected]=>
-            NULL
-            ["_dateFields":protected]=>
-            array(0) {
-            }
-            ["unsavedChangesWarn":protected]=>
-            NULL
-            ["ajaxResponse"]=>
-            array(0) {
-            }
-            ["urlPath"]=>
-            array(3) {
-              [0]=>
-              string(7) "civicrm"
-              [1]=>
-              string(5) "admin"
-              [2]=>
-              string(10) "extensions"
-            }
-            ["context":protected]=>
-            NULL
-            ["controller"]=>
-            object(CRM_Core_Controller_Simple)#142 (17) {
-              ["_title":protected]=>
-              string(25) "CRM_Admin_Form_Extensions"
-              ["_key"]=>
-              string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_scope":protected]=>
-              string(63) "CRM_Admin_Form_Extensions_b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_stateMachine":protected]=>
-              &object(CRM_Core_StateMachine)#143 (6) {
-                ["_controller":protected]=>
-                *RECURSION*
-                ["_states":protected]=>
-                array(1) {
-                  ["Extensions"]=>
-                  object(CRM_Core_State)#144 (5) {
-                    ["_name":protected]=>
-                    string(10) "Extensions"
-                    ["_type":protected]=>
-                    int(3)
-                    ["_back":protected]=>
-                    NULL
-                    ["_next":protected]=>
-                    NULL
-                    ["_stateMachine":protected]=>
-                    *RECURSION*
-                  }
-                }
-                ["_pages":protected]=>
-                array(1) {
-                  ["CRM_Admin_Form_Extensions"]=>
-                  NULL
-                }
-                ["_pageNames":protected]=>
-                array(1) {
-                  [0]=>
-                  string(10) "Extensions"
-                }
-                ["_action":protected]=>
-                int(0)
-                ["_name":protected]=>
-                NULL
-              }
-              ["_embedded":protected]=>
-              bool(true)
-              ["_skipRedirection":protected]=>
-              bool(false)
-              ["_print"]=>
-              int(0)
-              ["_generateQFKey"]=>
-              bool(true)
-              ["_QFResponseType"]=>
-              string(4) "html"
-              ["_parent":protected]=>
-              NULL
-              ["_destination"]=>
-              NULL
-              ["_entryURL"]=>
-              string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-              ["_pages"]=>
-              array(1) {
-                ["Extensions"]=>
-                *RECURSION*
-              }
-              ["_actions"]=>
-              array(12) {
-                ["Extensions"]=>
-                object(HTML_QuickForm_Action_Direct)#148 (0) {
-                }
-                ["display"]=>
-                object(CRM_Core_QuickForm_Action_Display)#149 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["next"]=>
-                object(CRM_Core_QuickForm_Action_Next)#150 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["back"]=>
-                object(CRM_Core_QuickForm_Action_Back)#151 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["process"]=>
-                object(CRM_Core_QuickForm_Action_Process)#152 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["cancel"]=>
-                object(CRM_Core_QuickForm_Action_Cancel)#153 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["refresh"]=>
-                object(CRM_Core_QuickForm_Action_Refresh)#154 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["reload"]=>
-                object(CRM_Core_QuickForm_Action_Reload)#155 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["done"]=>
-                object(CRM_Core_QuickForm_Action_Done)#156 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["jump"]=>
-                object(CRM_Core_QuickForm_Action_Jump)#157 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["submit"]=>
-                object(CRM_Core_QuickForm_Action_Submit)#158 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["upload"]=>
-                object(CRM_Core_QuickForm_Action_Upload)#159 (3) {
-                  ["_uploadNames":protected]=>
-                  array(4) {
-                    [0]=>
-                    string(12) "attachFile_1"
-                    [1]=>
-                    string(12) "attachFile_2"
-                    [2]=>
-                    string(12) "attachFile_3"
-                    [3]=>
-                    string(10) "uploadFile"
-                  }
-                  ["_uploadDir":protected]=>
-                  string(49) "/var/www/html/sites/default/files/civicrm/upload/"
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-              }
-              ["_name"]=>
-              string(63) "CRM_Admin_Form_Extensions_b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_modal"]=>
-              bool(true)
-              ["_actionName"]=>
-              array(2) {
-                [0]=>
-                string(10) "Extensions"
-                [1]=>
-                string(4) "next"
-              }
-            }
-            ["_chainSelectFields":"CRM_Core_Form":private]=>
-            array(0) {
-            }
-            ["_actions"]=>
-            array(0) {
-            }
-            ["_formBuilt"]=>
-            bool(true)
-            ["_elements"]=>
-            array(4) {
-              [0]=>
-              object(HTML_QuickForm_hidden)#160 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(5) "qfKey"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [1]=>
-              object(HTML_QuickForm_hidden)#174 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(8) "entryURL"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [2]=>
-              object(HTML_QuickForm_hidden)#275 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(11) "_qf_default"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(15) "Extensions:next"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [3]=>
-              object(HTML_QuickForm_group)#269 (14) {
-                ["_name"]=>
-                string(7) "buttons"
-                ["_elements"]=>
-                array(2) {
-                  [0]=>
-                  object(HTML_QuickForm_submit)#274 (9) {
-                    ["_label"]=>
-                    string(0) ""
-                    ["_type"]=>
-                    string(6) "submit"
-                    ["_flagFrozen"]=>
-                    bool(false)
-                    ["_persistantFreeze"]=>
-                    bool(false)
-                    ["_attributes"]=>
-                    array(5) {
-                      ["class"]=>
-                      string(32) "crm-form-submit default validate"
-                      ["crm-icon"]=>
-                      string(8) "fa-check"
-                      ["name"]=>
-                      string(19) "_qf_Extensions_next"
-                      ["value"]=>
-                      string(10) "Disabilita"
-                      ["type"]=>
-                      string(6) "submit"
-                    }
-                    ["_tabOffset"]=>
-                    int(0)
-                    ["_tab"]=>
-                    string(1) "	"
-                    ["_lineEnd"]=>
-                    string(1) "
-"
-                    ["_comment"]=>
-                    string(0) ""
-                  }
-                  [1]=>
-                  object(HTML_QuickForm_submit)#272 (9) {
-                    ["_label"]=>
-                    string(0) ""
-                    ["_type"]=>
-                    string(6) "submit"
-                    ["_flagFrozen"]=>
-                    bool(false)
-                    ["_persistantFreeze"]=>
-                    bool(false)
-                    ["_attributes"]=>
-                    array(5) {
-                      ["class"]=>
-                      string(22) "crm-form-submit cancel"
-                      ["crm-icon"]=>
-                      string(8) "fa-times"
-                      ["name"]=>
-                      string(21) "_qf_Extensions_cancel"
-                      ["value"]=>
-                      string(8) "Cancella"
-                      ["type"]=>
-                      string(6) "submit"
-                    }
-                    ["_tabOffset"]=>
-                    int(0)
-                    ["_tab"]=>
-                    string(1) "	"
-                    ["_lineEnd"]=>
-                    string(1) "
-"
-                    ["_comment"]=>
-                    string(0) ""
-                  }
-                }
-                ["_separator"]=>
-                array(2) {
-                  [0]=>
-                  string(30) "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                  [1]=>
-                  string(30) "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                }
-                ["_required"]=>
-                array(0) {
-                }
-                ["_appendName"]=>
-                bool(false)
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(5) "group"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                NULL
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-            }
-            ["_elementIndex"]=>
-            array(4) {
-              ["qfKey"]=>
-              int(0)
-              ["entryURL"]=>
-              int(1)
-              ["_qf_default"]=>
-              int(2)
-              ["buttons"]=>
-              int(3)
-            }
-            ["_duplicateIndex"]=>
-            array(0) {
-            }
-            ["_required"]=>
-            array(0) {
-            }
-            ["_jsPrefix"]=>
-            string(28) "Invalid information entered."
-            ["_jsPostfix"]=>
-            string(28) "Please correct these fields."
-            ["_datasource"]=>
-            NULL
-            ["_defaultValues"]=>
-            array(0) {
-            }
-            ["_constantValues"]=>
-            array(0) {
-            }
-            ["_submitValues"]=>
-            array(4) {
-              ["qfKey"]=>
-              string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["entryURL"]=>
-              string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-              ["_qf_default"]=>
-              string(15) "Extensions:next"
-              ["_qf_Extensions_next"]=>
-              string(10) "Disabilita"
-            }
-            ["_submitFiles"]=>
-            array(0) {
-            }
-            ["_maxFileSize"]=>
-            int(2097152)
-            ["_freezeAll"]=>
-            bool(false)
-            ["_rules"]=>
-            array(0) {
-            }
-            ["_formRules"]=>
-            array(0) {
-            }
-            ["_errors"]=>
-            array(0) {
-            }
-            ["_requiredNote"]=>
-            string(111) "<span style="font-size:80%; color:#ff0000;">*</span><span style="font-size:80%;"> denotes required field</span>"
-            ["_flagSubmitted"]=>
-            bool(true)
-            ["_attributes"]=>
-            array(5) {
-              ["action"]=>
-              string(25) "/civicrm/admin/extensions"
-              ["method"]=>
-              string(4) "post"
-              ["name"]=>
-              string(10) "Extensions"
-              ["id"]=>
-              string(10) "Extensions"
-              ["class"]=>
-              string(25) "CRM_Admin_Form_Extensions"
-            }
-            ["_tabOffset"]=>
-            int(0)
-            ["_tab"]=>
-            string(1) "	"
-            ["_lineEnd"]=>
-            string(1) "
-"
-            ["_comment"]=>
-            string(0) ""
-            ["_key"]=>
-            string(31) "uk.co.compucorp.civicrm.booking"
-          }
-          [1]=>
-          string(4) "next"
-          [2]=>
-          string(4) "Next"
-        }
-      }
-      [12]=>
-      array(6) {
-        ["file"]=>
-        string(78) "/var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php"
-        ["line"]=>
-        int(203)
-        ["function"]=>
-        string(7) "perform"
-        ["class"]=>
-        string(30) "CRM_Core_QuickForm_Action_Next"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(2) {
-          [0]=>
-          &object(CRM_Admin_Form_Extensions)#145 (47) {
-            ["_id":protected]=>
-            NULL
-            ["_values":protected]=>
-            array(0) {
-            }
-            ["_BAOName":protected]=>
-            string(22) "CRM_Core_BAO_Extension"
-            ["_state":protected]=>
-            NULL
-            ["_name":protected]=>
-            string(10) "Extensions"
-            ["_title":protected]=>
-            NULL
-            ["_defaults"]=>
-            array(0) {
-            }
-            ["_options"]=>
-            NULL
-            ["_action"]=>
-            int(64)
-            ["_paymentProcessors":protected]=>
-            NULL
-            ["_paymentProcessorIDs"]=>
-            NULL
-            ["_paymentProcessorID":protected]=>
-            NULL
-            ["_is_pay_later_enabled":protected]=>
-            NULL
-            ["_renderer":protected]=>
-            NULL
-            ["_dateFields":protected]=>
-            array(0) {
-            }
-            ["unsavedChangesWarn":protected]=>
-            NULL
-            ["ajaxResponse"]=>
-            array(0) {
-            }
-            ["urlPath"]=>
-            array(3) {
-              [0]=>
-              string(7) "civicrm"
-              [1]=>
-              string(5) "admin"
-              [2]=>
-              string(10) "extensions"
-            }
-            ["context":protected]=>
-            NULL
-            ["controller"]=>
-            object(CRM_Core_Controller_Simple)#142 (17) {
-              ["_title":protected]=>
-              string(25) "CRM_Admin_Form_Extensions"
-              ["_key"]=>
-              string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_scope":protected]=>
-              string(63) "CRM_Admin_Form_Extensions_b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_stateMachine":protected]=>
-              &object(CRM_Core_StateMachine)#143 (6) {
-                ["_controller":protected]=>
-                *RECURSION*
-                ["_states":protected]=>
-                array(1) {
-                  ["Extensions"]=>
-                  object(CRM_Core_State)#144 (5) {
-                    ["_name":protected]=>
-                    string(10) "Extensions"
-                    ["_type":protected]=>
-                    int(3)
-                    ["_back":protected]=>
-                    NULL
-                    ["_next":protected]=>
-                    NULL
-                    ["_stateMachine":protected]=>
-                    *RECURSION*
-                  }
-                }
-                ["_pages":protected]=>
-                array(1) {
-                  ["CRM_Admin_Form_Extensions"]=>
-                  NULL
-                }
-                ["_pageNames":protected]=>
-                array(1) {
-                  [0]=>
-                  string(10) "Extensions"
-                }
-                ["_action":protected]=>
-                int(0)
-                ["_name":protected]=>
-                NULL
-              }
-              ["_embedded":protected]=>
-              bool(true)
-              ["_skipRedirection":protected]=>
-              bool(false)
-              ["_print"]=>
-              int(0)
-              ["_generateQFKey"]=>
-              bool(true)
-              ["_QFResponseType"]=>
-              string(4) "html"
-              ["_parent":protected]=>
-              NULL
-              ["_destination"]=>
-              NULL
-              ["_entryURL"]=>
-              string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-              ["_pages"]=>
-              array(1) {
-                ["Extensions"]=>
-                *RECURSION*
-              }
-              ["_actions"]=>
-              array(12) {
-                ["Extensions"]=>
-                object(HTML_QuickForm_Action_Direct)#148 (0) {
-                }
-                ["display"]=>
-                object(CRM_Core_QuickForm_Action_Display)#149 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["next"]=>
-                object(CRM_Core_QuickForm_Action_Next)#150 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["back"]=>
-                object(CRM_Core_QuickForm_Action_Back)#151 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["process"]=>
-                object(CRM_Core_QuickForm_Action_Process)#152 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["cancel"]=>
-                object(CRM_Core_QuickForm_Action_Cancel)#153 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["refresh"]=>
-                object(CRM_Core_QuickForm_Action_Refresh)#154 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["reload"]=>
-                object(CRM_Core_QuickForm_Action_Reload)#155 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["done"]=>
-                object(CRM_Core_QuickForm_Action_Done)#156 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["jump"]=>
-                object(CRM_Core_QuickForm_Action_Jump)#157 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["submit"]=>
-                object(CRM_Core_QuickForm_Action_Submit)#158 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["upload"]=>
-                object(CRM_Core_QuickForm_Action_Upload)#159 (3) {
-                  ["_uploadNames":protected]=>
-                  array(4) {
-                    [0]=>
-                    string(12) "attachFile_1"
-                    [1]=>
-                    string(12) "attachFile_2"
-                    [2]=>
-                    string(12) "attachFile_3"
-                    [3]=>
-                    string(10) "uploadFile"
-                  }
-                  ["_uploadDir":protected]=>
-                  string(49) "/var/www/html/sites/default/files/civicrm/upload/"
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-              }
-              ["_name"]=>
-              string(63) "CRM_Admin_Form_Extensions_b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_modal"]=>
-              bool(true)
-              ["_actionName"]=>
-              array(2) {
-                [0]=>
-                string(10) "Extensions"
-                [1]=>
-                string(4) "next"
-              }
-            }
-            ["_chainSelectFields":"CRM_Core_Form":private]=>
-            array(0) {
-            }
-            ["_actions"]=>
-            array(0) {
-            }
-            ["_formBuilt"]=>
-            bool(true)
-            ["_elements"]=>
-            array(4) {
-              [0]=>
-              object(HTML_QuickForm_hidden)#160 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(5) "qfKey"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [1]=>
-              object(HTML_QuickForm_hidden)#174 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(8) "entryURL"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [2]=>
-              object(HTML_QuickForm_hidden)#275 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(11) "_qf_default"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(15) "Extensions:next"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [3]=>
-              object(HTML_QuickForm_group)#269 (14) {
-                ["_name"]=>
-                string(7) "buttons"
-                ["_elements"]=>
-                array(2) {
-                  [0]=>
-                  object(HTML_QuickForm_submit)#274 (9) {
-                    ["_label"]=>
-                    string(0) ""
-                    ["_type"]=>
-                    string(6) "submit"
-                    ["_flagFrozen"]=>
-                    bool(false)
-                    ["_persistantFreeze"]=>
-                    bool(false)
-                    ["_attributes"]=>
-                    array(5) {
-                      ["class"]=>
-                      string(32) "crm-form-submit default validate"
-                      ["crm-icon"]=>
-                      string(8) "fa-check"
-                      ["name"]=>
-                      string(19) "_qf_Extensions_next"
-                      ["value"]=>
-                      string(10) "Disabilita"
-                      ["type"]=>
-                      string(6) "submit"
-                    }
-                    ["_tabOffset"]=>
-                    int(0)
-                    ["_tab"]=>
-                    string(1) "	"
-                    ["_lineEnd"]=>
-                    string(1) "
-"
-                    ["_comment"]=>
-                    string(0) ""
-                  }
-                  [1]=>
-                  object(HTML_QuickForm_submit)#272 (9) {
-                    ["_label"]=>
-                    string(0) ""
-                    ["_type"]=>
-                    string(6) "submit"
-                    ["_flagFrozen"]=>
-                    bool(false)
-                    ["_persistantFreeze"]=>
-                    bool(false)
-                    ["_attributes"]=>
-                    array(5) {
-                      ["class"]=>
-                      string(22) "crm-form-submit cancel"
-                      ["crm-icon"]=>
-                      string(8) "fa-times"
-                      ["name"]=>
-                      string(21) "_qf_Extensions_cancel"
-                      ["value"]=>
-                      string(8) "Cancella"
-                      ["type"]=>
-                      string(6) "submit"
-                    }
-                    ["_tabOffset"]=>
-                    int(0)
-                    ["_tab"]=>
-                    string(1) "	"
-                    ["_lineEnd"]=>
-                    string(1) "
-"
-                    ["_comment"]=>
-                    string(0) ""
-                  }
-                }
-                ["_separator"]=>
-                array(2) {
-                  [0]=>
-                  string(30) "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                  [1]=>
-                  string(30) "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                }
-                ["_required"]=>
-                array(0) {
-                }
-                ["_appendName"]=>
-                bool(false)
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(5) "group"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                NULL
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-            }
-            ["_elementIndex"]=>
-            array(4) {
-              ["qfKey"]=>
-              int(0)
-              ["entryURL"]=>
-              int(1)
-              ["_qf_default"]=>
-              int(2)
-              ["buttons"]=>
-              int(3)
-            }
-            ["_duplicateIndex"]=>
-            array(0) {
-            }
-            ["_required"]=>
-            array(0) {
-            }
-            ["_jsPrefix"]=>
-            string(28) "Invalid information entered."
-            ["_jsPostfix"]=>
-            string(28) "Please correct these fields."
-            ["_datasource"]=>
-            NULL
-            ["_defaultValues"]=>
-            array(0) {
-            }
-            ["_constantValues"]=>
-            array(0) {
-            }
-            ["_submitValues"]=>
-            array(4) {
-              ["qfKey"]=>
-              string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["entryURL"]=>
-              string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-              ["_qf_default"]=>
-              string(15) "Extensions:next"
-              ["_qf_Extensions_next"]=>
-              string(10) "Disabilita"
-            }
-            ["_submitFiles"]=>
-            array(0) {
-            }
-            ["_maxFileSize"]=>
-            int(2097152)
-            ["_freezeAll"]=>
-            bool(false)
-            ["_rules"]=>
-            array(0) {
-            }
-            ["_formRules"]=>
-            array(0) {
-            }
-            ["_errors"]=>
-            array(0) {
-            }
-            ["_requiredNote"]=>
-            string(111) "<span style="font-size:80%; color:#ff0000;">*</span><span style="font-size:80%;"> denotes required field</span>"
-            ["_flagSubmitted"]=>
-            bool(true)
-            ["_attributes"]=>
-            array(5) {
-              ["action"]=>
-              string(25) "/civicrm/admin/extensions"
-              ["method"]=>
-              string(4) "post"
-              ["name"]=>
-              string(10) "Extensions"
-              ["id"]=>
-              string(10) "Extensions"
-              ["class"]=>
-              string(25) "CRM_Admin_Form_Extensions"
-            }
-            ["_tabOffset"]=>
-            int(0)
-            ["_tab"]=>
-            string(1) "	"
-            ["_lineEnd"]=>
-            string(1) "
-"
-            ["_comment"]=>
-            string(0) ""
-            ["_key"]=>
-            string(31) "uk.co.compucorp.civicrm.booking"
-          }
-          [1]=>
-          string(4) "next"
-        }
-      }
-      [13]=>
-      array(6) {
-        ["file"]=>
-        string(72) "/var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php"
-        ["line"]=>
-        int(103)
-        ["function"]=>
-        string(6) "handle"
-        ["class"]=>
-        string(25) "HTML_QuickForm_Controller"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(2) {
-          [0]=>
-          &object(CRM_Admin_Form_Extensions)#145 (47) {
-            ["_id":protected]=>
-            NULL
-            ["_values":protected]=>
-            array(0) {
-            }
-            ["_BAOName":protected]=>
-            string(22) "CRM_Core_BAO_Extension"
-            ["_state":protected]=>
-            NULL
-            ["_name":protected]=>
-            string(10) "Extensions"
-            ["_title":protected]=>
-            NULL
-            ["_defaults"]=>
-            array(0) {
-            }
-            ["_options"]=>
-            NULL
-            ["_action"]=>
-            int(64)
-            ["_paymentProcessors":protected]=>
-            NULL
-            ["_paymentProcessorIDs"]=>
-            NULL
-            ["_paymentProcessorID":protected]=>
-            NULL
-            ["_is_pay_later_enabled":protected]=>
-            NULL
-            ["_renderer":protected]=>
-            NULL
-            ["_dateFields":protected]=>
-            array(0) {
-            }
-            ["unsavedChangesWarn":protected]=>
-            NULL
-            ["ajaxResponse"]=>
-            array(0) {
-            }
-            ["urlPath"]=>
-            array(3) {
-              [0]=>
-              string(7) "civicrm"
-              [1]=>
-              string(5) "admin"
-              [2]=>
-              string(10) "extensions"
-            }
-            ["context":protected]=>
-            NULL
-            ["controller"]=>
-            object(CRM_Core_Controller_Simple)#142 (17) {
-              ["_title":protected]=>
-              string(25) "CRM_Admin_Form_Extensions"
-              ["_key"]=>
-              string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_scope":protected]=>
-              string(63) "CRM_Admin_Form_Extensions_b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_stateMachine":protected]=>
-              &object(CRM_Core_StateMachine)#143 (6) {
-                ["_controller":protected]=>
-                *RECURSION*
-                ["_states":protected]=>
-                array(1) {
-                  ["Extensions"]=>
-                  object(CRM_Core_State)#144 (5) {
-                    ["_name":protected]=>
-                    string(10) "Extensions"
-                    ["_type":protected]=>
-                    int(3)
-                    ["_back":protected]=>
-                    NULL
-                    ["_next":protected]=>
-                    NULL
-                    ["_stateMachine":protected]=>
-                    *RECURSION*
-                  }
-                }
-                ["_pages":protected]=>
-                array(1) {
-                  ["CRM_Admin_Form_Extensions"]=>
-                  NULL
-                }
-                ["_pageNames":protected]=>
-                array(1) {
-                  [0]=>
-                  string(10) "Extensions"
-                }
-                ["_action":protected]=>
-                int(0)
-                ["_name":protected]=>
-                NULL
-              }
-              ["_embedded":protected]=>
-              bool(true)
-              ["_skipRedirection":protected]=>
-              bool(false)
-              ["_print"]=>
-              int(0)
-              ["_generateQFKey"]=>
-              bool(true)
-              ["_QFResponseType"]=>
-              string(4) "html"
-              ["_parent":protected]=>
-              NULL
-              ["_destination"]=>
-              NULL
-              ["_entryURL"]=>
-              string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-              ["_pages"]=>
-              array(1) {
-                ["Extensions"]=>
-                *RECURSION*
-              }
-              ["_actions"]=>
-              array(12) {
-                ["Extensions"]=>
-                object(HTML_QuickForm_Action_Direct)#148 (0) {
-                }
-                ["display"]=>
-                object(CRM_Core_QuickForm_Action_Display)#149 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["next"]=>
-                object(CRM_Core_QuickForm_Action_Next)#150 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["back"]=>
-                object(CRM_Core_QuickForm_Action_Back)#151 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["process"]=>
-                object(CRM_Core_QuickForm_Action_Process)#152 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["cancel"]=>
-                object(CRM_Core_QuickForm_Action_Cancel)#153 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["refresh"]=>
-                object(CRM_Core_QuickForm_Action_Refresh)#154 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["reload"]=>
-                object(CRM_Core_QuickForm_Action_Reload)#155 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["done"]=>
-                object(CRM_Core_QuickForm_Action_Done)#156 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["jump"]=>
-                object(CRM_Core_QuickForm_Action_Jump)#157 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["submit"]=>
-                object(CRM_Core_QuickForm_Action_Submit)#158 (1) {
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-                ["upload"]=>
-                object(CRM_Core_QuickForm_Action_Upload)#159 (3) {
-                  ["_uploadNames":protected]=>
-                  array(4) {
-                    [0]=>
-                    string(12) "attachFile_1"
-                    [1]=>
-                    string(12) "attachFile_2"
-                    [2]=>
-                    string(12) "attachFile_3"
-                    [3]=>
-                    string(10) "uploadFile"
-                  }
-                  ["_uploadDir":protected]=>
-                  string(49) "/var/www/html/sites/default/files/civicrm/upload/"
-                  ["_stateMachine":protected]=>
-                  &object(CRM_Core_StateMachine)#143 (6) {
-                    ["_controller":protected]=>
-                    *RECURSION*
-                    ["_states":protected]=>
-                    array(1) {
-                      ["Extensions"]=>
-                      object(CRM_Core_State)#144 (5) {
-                        ["_name":protected]=>
-                        string(10) "Extensions"
-                        ["_type":protected]=>
-                        int(3)
-                        ["_back":protected]=>
-                        NULL
-                        ["_next":protected]=>
-                        NULL
-                        ["_stateMachine":protected]=>
-                        *RECURSION*
-                      }
-                    }
-                    ["_pages":protected]=>
-                    array(1) {
-                      ["CRM_Admin_Form_Extensions"]=>
-                      NULL
-                    }
-                    ["_pageNames":protected]=>
-                    array(1) {
-                      [0]=>
-                      string(10) "Extensions"
-                    }
-                    ["_action":protected]=>
-                    int(0)
-                    ["_name":protected]=>
-                    NULL
-                  }
-                }
-              }
-              ["_name"]=>
-              string(63) "CRM_Admin_Form_Extensions_b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["_modal"]=>
-              bool(true)
-              ["_actionName"]=>
-              array(2) {
-                [0]=>
-                string(10) "Extensions"
-                [1]=>
-                string(4) "next"
-              }
-            }
-            ["_chainSelectFields":"CRM_Core_Form":private]=>
-            array(0) {
-            }
-            ["_actions"]=>
-            array(0) {
-            }
-            ["_formBuilt"]=>
-            bool(true)
-            ["_elements"]=>
-            array(4) {
-              [0]=>
-              object(HTML_QuickForm_hidden)#160 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(5) "qfKey"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [1]=>
-              object(HTML_QuickForm_hidden)#174 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(8) "entryURL"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [2]=>
-              object(HTML_QuickForm_hidden)#275 (9) {
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(6) "hidden"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                array(3) {
-                  ["name"]=>
-                  string(11) "_qf_default"
-                  ["type"]=>
-                  string(6) "hidden"
-                  ["value"]=>
-                  string(15) "Extensions:next"
-                }
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-              [3]=>
-              object(HTML_QuickForm_group)#269 (14) {
-                ["_name"]=>
-                string(7) "buttons"
-                ["_elements"]=>
-                array(2) {
-                  [0]=>
-                  object(HTML_QuickForm_submit)#274 (9) {
-                    ["_label"]=>
-                    string(0) ""
-                    ["_type"]=>
-                    string(6) "submit"
-                    ["_flagFrozen"]=>
-                    bool(false)
-                    ["_persistantFreeze"]=>
-                    bool(false)
-                    ["_attributes"]=>
-                    array(5) {
-                      ["class"]=>
-                      string(32) "crm-form-submit default validate"
-                      ["crm-icon"]=>
-                      string(8) "fa-check"
-                      ["name"]=>
-                      string(19) "_qf_Extensions_next"
-                      ["value"]=>
-                      string(10) "Disabilita"
-                      ["type"]=>
-                      string(6) "submit"
-                    }
-                    ["_tabOffset"]=>
-                    int(0)
-                    ["_tab"]=>
-                    string(1) "	"
-                    ["_lineEnd"]=>
-                    string(1) "
-"
-                    ["_comment"]=>
-                    string(0) ""
-                  }
-                  [1]=>
-                  object(HTML_QuickForm_submit)#272 (9) {
-                    ["_label"]=>
-                    string(0) ""
-                    ["_type"]=>
-                    string(6) "submit"
-                    ["_flagFrozen"]=>
-                    bool(false)
-                    ["_persistantFreeze"]=>
-                    bool(false)
-                    ["_attributes"]=>
-                    array(5) {
-                      ["class"]=>
-                      string(22) "crm-form-submit cancel"
-                      ["crm-icon"]=>
-                      string(8) "fa-times"
-                      ["name"]=>
-                      string(21) "_qf_Extensions_cancel"
-                      ["value"]=>
-                      string(8) "Cancella"
-                      ["type"]=>
-                      string(6) "submit"
-                    }
-                    ["_tabOffset"]=>
-                    int(0)
-                    ["_tab"]=>
-                    string(1) "	"
-                    ["_lineEnd"]=>
-                    string(1) "
-"
-                    ["_comment"]=>
-                    string(0) ""
-                  }
-                }
-                ["_separator"]=>
-                array(2) {
-                  [0]=>
-                  string(30) "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                  [1]=>
-                  string(30) "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                }
-                ["_required"]=>
-                array(0) {
-                }
-                ["_appendName"]=>
-                bool(false)
-                ["_label"]=>
-                string(0) ""
-                ["_type"]=>
-                string(5) "group"
-                ["_flagFrozen"]=>
-                bool(false)
-                ["_persistantFreeze"]=>
-                bool(false)
-                ["_attributes"]=>
-                NULL
-                ["_tabOffset"]=>
-                int(0)
-                ["_tab"]=>
-                string(1) "	"
-                ["_lineEnd"]=>
-                string(1) "
-"
-                ["_comment"]=>
-                string(0) ""
-              }
-            }
-            ["_elementIndex"]=>
-            array(4) {
-              ["qfKey"]=>
-              int(0)
-              ["entryURL"]=>
-              int(1)
-              ["_qf_default"]=>
-              int(2)
-              ["buttons"]=>
-              int(3)
-            }
-            ["_duplicateIndex"]=>
-            array(0) {
-            }
-            ["_required"]=>
-            array(0) {
-            }
-            ["_jsPrefix"]=>
-            string(28) "Invalid information entered."
-            ["_jsPostfix"]=>
-            string(28) "Please correct these fields."
-            ["_datasource"]=>
-            NULL
-            ["_defaultValues"]=>
-            array(0) {
-            }
-            ["_constantValues"]=>
-            array(0) {
-            }
-            ["_submitValues"]=>
-            array(4) {
-              ["qfKey"]=>
-              string(37) "b511d1baa150c06bff886cc1aa601dfa_6682"
-              ["entryURL"]=>
-              string(61) "https://34.154.205.81/civicrm/admin/setting/component?reset=1"
-              ["_qf_default"]=>
-              string(15) "Extensions:next"
-              ["_qf_Extensions_next"]=>
-              string(10) "Disabilita"
-            }
-            ["_submitFiles"]=>
-            array(0) {
-            }
-            ["_maxFileSize"]=>
-            int(2097152)
-            ["_freezeAll"]=>
-            bool(false)
-            ["_rules"]=>
-            array(0) {
-            }
-            ["_formRules"]=>
-            array(0) {
-            }
-            ["_errors"]=>
-            array(0) {
-            }
-            ["_requiredNote"]=>
-            string(111) "<span style="font-size:80%; color:#ff0000;">*</span><span style="font-size:80%;"> denotes required field</span>"
-            ["_flagSubmitted"]=>
-            bool(true)
-            ["_attributes"]=>
-            array(5) {
-              ["action"]=>
-              string(25) "/civicrm/admin/extensions"
-              ["method"]=>
-              string(4) "post"
-              ["name"]=>
-              string(10) "Extensions"
-              ["id"]=>
-              string(10) "Extensions"
-              ["class"]=>
-              string(25) "CRM_Admin_Form_Extensions"
-            }
-            ["_tabOffset"]=>
-            int(0)
-            ["_tab"]=>
-            string(1) "	"
-            ["_lineEnd"]=>
-            string(1) "
-"
-            ["_comment"]=>
-            string(0) ""
-            ["_key"]=>
-            string(31) "uk.co.compucorp.civicrm.booking"
-          }
-          [1]=>
-          string(4) "next"
-        }
-      }
-      [14]=>
-      array(6) {
-        ["file"]=>
-        string(63) "/var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php"
-        ["line"]=>
-        int(351)
-        ["function"]=>
-        string(6) "handle"
-        ["class"]=>
-        string(19) "HTML_QuickForm_Page"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(1) {
-          [0]=>
-          string(4) "next"
-        }
-      }
-      [15]=>
-      array(6) {
-        ["file"]=>
-        string(63) "/var/www/html/sites/all/modules/civicrm/CRM/Core/Page/Basic.php"
-        ["line"]=>
-        int(401)
-        ["function"]=>
-        string(3) "run"
-        ["class"]=>
-        string(19) "CRM_Core_Controller"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(0) {
-        }
-      }
-      [16]=>
-      array(6) {
-        ["file"]=>
-        string(63) "/var/www/html/sites/all/modules/civicrm/CRM/Core/Page/Basic.php"
-        ["line"]=>
-        int(156)
-        ["function"]=>
-        string(4) "edit"
-        ["class"]=>
-        string(19) "CRM_Core_Page_Basic"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(2) {
-          [0]=>
-          int(64)
-          [1]=>
-          NULL
-        }
-      }
-      [17]=>
-      array(6) {
-        ["file"]=>
-        string(69) "/var/www/html/sites/all/modules/civicrm/CRM/Admin/Page/Extensions.php"
-        ["line"]=>
-        int(121)
-        ["function"]=>
-        string(3) "run"
-        ["class"]=>
-        string(19) "CRM_Core_Page_Basic"
-        ["type"]=>
-        string(2) "->"
-        ["args"]=>
-        array(0) {
-        }
-      }
-      [18]=>
-      array(6) {
-        ["file"]=>
         string(59) "/var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php"
         ["line"]=>
         int(309)
         ["function"]=>
         string(3) "run"
         ["class"]=>
-        string(25) "CRM_Admin_Page_Extensions"
+        string(29) "CRM_Contact_Page_View_Summary"
         ["type"]=>
         string(2) "->"
         ["args"]=>
@@ -3069,15 +270,15 @@ $Fatal Error Details = array(3) {
             [0]=>
             string(7) "civicrm"
             [1]=>
-            string(5) "admin"
+            string(7) "contact"
             [2]=>
-            string(10) "extensions"
+            string(4) "view"
           }
           [1]=>
           NULL
         }
       }
-      [19]=>
+      [4]=>
       array(6) {
         ["file"]=>
         string(59) "/var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php"
@@ -3092,15 +293,17 @@ $Fatal Error Details = array(3) {
         ["args"]=>
         array(1) {
           [0]=>
-          array(16) {
+          array(14) {
             ["id"]=>
-            string(3) "206"
+            string(2) "85"
             ["domain_id"]=>
             string(1) "1"
             ["path"]=>
-            string(24) "civicrm/admin/extensions"
+            string(20) "civicrm/contact/view"
+            ["path_arguments"]=>
+            string(11) "cid=%%cid%%"
             ["title"]=>
-            string(19) "Gestione Estensioni"
+            string(18) "Riepilogo Contatti"
             ["access_callback"]=>
             array(2) {
               [0]=>
@@ -3111,17 +314,21 @@ $Fatal Error Details = array(3) {
             ["access_arguments"]=>
             array(2) {
               [0]=>
-              array(1) {
+              array(3) {
                 [0]=>
-                string(18) "administer CiviCRM"
+                string(14) "access CiviCRM"
+                [1]=>
+                string(15) "edit my contact"
+                [2]=>
+                string(15) "view my contact"
               }
               [1]=>
-              string(3) "and"
+              string(2) "or"
             }
             ["page_callback"]=>
-            string(25) "CRM_Admin_Page_Extensions"
+            string(29) "CRM_Contact_Page_View_Summary"
             ["breadcrumb"]=>
-            array(2) {
+            array(1) {
               [0]=>
               array(2) {
                 ["title"]=>
@@ -3129,34 +336,21 @@ $Fatal Error Details = array(3) {
                 ["url"]=>
                 string(16) "/civicrm?reset=1"
               }
-              [1]=>
-              array(2) {
-                ["title"]=>
-                string(18) "Amministra CiviCRM"
-                ["url"]=>
-                string(22) "/civicrm/admin?reset=1"
-              }
             }
             ["is_ssl"]=>
-            string(1) "1"
+            string(1) "0"
             ["weight"]=>
-            string(3) "120"
+            string(1) "1"
             ["type"]=>
             string(1) "1"
             ["page_type"]=>
             string(1) "0"
-            ["desc"]=>
-            string(0) ""
-            ["adminGroup"]=>
-            string(15) "System Settings"
-            ["icon"]=>
-            string(26) "admin/small/price_sets.png"
             ["page_arguments"]=>
             bool(false)
           }
         }
       }
-      [20]=>
+      [5]=>
       array(6) {
         ["file"]=>
         string(59) "/var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php"
@@ -3175,13 +369,13 @@ $Fatal Error Details = array(3) {
             [0]=>
             string(7) "civicrm"
             [1]=>
-            string(5) "admin"
+            string(7) "contact"
             [2]=>
-            string(10) "extensions"
+            string(4) "view"
           }
         }
       }
-      [21]=>
+      [6]=>
       array(6) {
         ["file"]=>
         string(61) "/var/www/html/sites/all/modules/civicrm/drupal/civicrm.module"
@@ -3200,13 +394,13 @@ $Fatal Error Details = array(3) {
             [0]=>
             string(7) "civicrm"
             [1]=>
-            string(5) "admin"
+            string(7) "contact"
             [2]=>
-            string(10) "extensions"
+            string(4) "view"
           }
         }
       }
-      [22]=>
+      [7]=>
       array(4) {
         ["file"]=>
         string(31) "/var/www/html/includes/menu.inc"
@@ -3217,12 +411,12 @@ $Fatal Error Details = array(3) {
         ["args"]=>
         array(2) {
           [0]=>
-          string(5) "admin"
+          string(7) "contact"
           [1]=>
-          string(10) "extensions"
+          string(4) "view"
         }
       }
-      [23]=>
+      [8]=>
       array(4) {
         ["file"]=>
         string(23) "/var/www/html/index.php"
@@ -3241,10 +435,10 @@ $Fatal Error Details = array(3) {
 }
 
 
-Jul 18 21:55:12  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(459): CRM_Core_Error::backtrace("backTrace", TRUE)
-#1 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(55): CRM_Core_Error::handleUnhandledException(Object(CiviCRM_API3_Exception))
+Oct 27 21:36:05  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(459): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(55): CRM_Core_Error::handleUnhandledException(Object(CRM_Core_Exception))
 #2 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
-#3 /var/www/html/includes/menu.inc(527): civicrm_invoke("admin", "extensions")
+#3 /var/www/html/includes/menu.inc(527): civicrm_invoke("contact", "view")
 #4 /var/www/html/index.php(21): menu_execute_active_handler()
 #5 {main}
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-16 18:24:37
+<?php /* Smarty version 2.6.31, created on 2023-09-30 21:42:32
          compiled from CRM/Custom/Page/Group.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Custom/Page/Group.tpl', 1, false),array('block', 'ts', 'CRM/Custom/Page/Group.tpl', 35, false),array('block', 'crmButton', 'CRM/Custom/Page/Group.tpl', 73, false),array('function', 'docURL', 'CRM/Custom/Page/Group.tpl', 35, false),array('function', 'cycle', 'CRM/Custom/Page/Group.tpl', 58, false),array('function', 'crmURL', 'CRM/Custom/Page/Group.tpl', 84, false),array('modifier', 'replace', 'CRM/Custom/Page/Group.tpl', 65, false),)), $this); ?>

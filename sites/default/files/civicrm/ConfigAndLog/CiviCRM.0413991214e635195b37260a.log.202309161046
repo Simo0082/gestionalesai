@@ -1,0 +1,1813 @@
+Aug 02 14:28:10  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 02 14:28:10  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:11), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:11))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:11))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 02 14:28:10  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 02 14:30:17  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 02 14:30:17  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:11), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:11))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:11))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 02 14:30:17  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 07 15:28:27  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 07 15:28:27  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 07 15:28:27  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 07 15:28:36  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 07 15:28:36  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 07 15:28:36  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 07 22:58:59  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 07 22:58:59  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 07 22:58:59  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 07 22:59:04  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_case_type (name , title , is_active , weight , definition ) VALUES ('inserimenti_accoglienza' , 'INSERIMENTI ACCOGLIENZA' ,  1 ,  1 , '<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n\n<CaseType>\n<name>inserimenti_accoglienza</name>\n<ActivityTypes>\n<ActivityType>\n<name>Open Case</name>\n<max_instances>1</max_instances>\n</ActivityType>\n<ActivityType>\n<name>Email</name>\n</ActivityType>\n<ActivityType>\n<name>Follow up</name>\n</ActivityType>\n<ActivityType>\n<name>Meeting</name>\n</ActivityType>\n<ActivityType>\n<name>Phone Call</name>\n</ActivityType>\n</ActivityTypes>\n<ActivitySets>\n<ActivitySet>\n<name>standard_timeline</name>\n<label>Standard Timeline</label>\n<timeline>true</timeline>\n<ActivityTypes>\n<ActivityType>\n<name>Open Case</name>\n<status>Completed</status>\n<label>Apri un Caso</label>\n<default_assignee_type>1</default_assignee_type>\n</ActivityType>\n</ActivityTypes>\n</ActivitySet>\n</ActivitySets>\n<CaseRoles>\n<RelationshipType>\n<name>Case Coordinator</name>\n<creator>1</creator>\n<manager>1</manager>\n</RelationshipType>\n</CaseRoles>\n</CaseType>' )  [nativecode=1062 ** Duplicate entry 'inserimenti_accoglienza' for key 'case_type_name']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_case_type (name , title , is_active , weight , definition ) VALUES ('inserimenti_accoglienza' , 'INSERIMENTI ACCOGLIENZA' ,  1 ,  1 , '<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n\n<CaseType>\n<name>inserimenti_accoglienza</name>\n<ActivityTypes>\n<ActivityType>\n<name>Open Case</name>\n<max_instances>1</max_instances>\n</ActivityType>\n<ActivityType>\n<name>Email</name>\n</ActivityType>\n<ActivityType>\n<name>Follow up</name>\n</ActivityType>\n<ActivityType>\n<name>Meeting</name>\n</ActivityType>\n<ActivityType>\n<name>Phone Call</name>\n</ActivityType>\n</ActivityTypes>\n<ActivitySets>\n<ActivitySet>\n<name>standard_timeline</name>\n<label>Standard Timeline</label>\n<timeline>true</timeline>\n<ActivityTypes>\n<ActivityType>\n<name>Open Case</name>\n<status>Completed</status>\n<label>Apri un Caso</label>\n<default_assignee_type>1</default_assignee_type>\n</ActivityType>\n</ActivityTypes>\n</ActivitySet>\n</ActivitySets>\n<CaseRoles>\n<RelationshipType>\n<name>Case Coordinator</name>\n<creator>1</creator>\n<manager>1</manager>\n</RelationshipType>\n</CaseRoles>\n</CaseType>' )  [nativecode=1062 ** Duplicate entry 'inserimenti_accoglienza' for key 'case_type_name']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_case_type (name , title , is_active , weight , definition ) VALUES ('inserimenti_accoglienza' , 'INSERIMENTI ACCOGLIENZA' ,  1 ,  1 , '<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n\n<CaseType>\n<name>inserimenti_accoglienza</name>\n<ActivityTypes>\n<ActivityType>\n<name>Open Case</name>\n<max_instances>1</max_instances>\n</ActivityType>\n<ActivityType>\n<name>Email</name>\n</ActivityType>\n<ActivityType>\n<name>Follow up</name>\n</ActivityType>\n<ActivityType>\n<name>Meeting</name>\n</ActivityType>\n<ActivityType>\n<name>Phone Call</name>\n</ActivityType>\n</ActivityTypes>\n<ActivitySets>\n<ActivitySet>\n<name>standard_timeline</name>\n<label>Standard Timeline</label>\n<timeline>true</timeline>\n<ActivityTypes>\n<ActivityType>\n<name>Open Case</name>\n<status>Completed</status>\n<label>Apri un Caso</label>\n<default_assignee_type>1</default_assignee_type>\n</ActivityType>\n</ActivityTypes>\n</ActivitySet>\n</ActivitySets>\n<CaseRoles>\n<RelationshipType>\n<name>Case Coordinator</name>\n<creator>1</creator>\n<manager>1</manager>\n</RelationshipType>\n</CaseRoles>\n</CaseType>' )  [nativecode=1062 ** Duplicate entry 'inserimenti_accoglienza' for key 'case_type_name']"]
+)
+
+
+Aug 07 22:59:04  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_case_type (name , title , is_active , weight , definition...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_case_type (name , title , is_active , weight , definition...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_case_type (name , title , is_active , weight , definition...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_case_type (name , title , is_active , weight , definition...", "1062 ** Duplicate entry 'inserimenti_accoglienza' for key 'case_type_name'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_case_type (name , title , is_active , weight , definition...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_case_type (name , title , is_active , weight , definition...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_case_type (name , title , is_active , weight , definition...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Case/BAO/CaseType.php(83): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Case/BAO/CaseType.php(325): CRM_Case_BAO_CaseType::add((Array:7))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1284): CRM_Case_BAO_CaseType::create((Array:7), (Array:1))
+#15 /var/www/html/sites/all/modules/civicrm/api/v3/CaseType.php(60): _civicrm_api3_basic_create("CRM_Case_BAO_CaseType", (Array:7), "CaseType")
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_case_type_create((Array:7))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#19 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#24 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#25 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#26 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#27 /var/www/html/index.php(21): menu_execute_active_handler()
+#28 {main}
+
+
+Aug 07 22:59:35  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 07 22:59:35  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 07 22:59:35  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 07 23:10:53  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 07 23:10:53  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 07 23:10:53  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 12:40:35  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 12:40:35  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 12:40:35  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 12:42:25  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 12:42:25  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 12:42:25  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 15:05:08  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 15:05:08  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 15:05:08  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 15:12:52  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 15:12:52  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 15:12:52  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 15:14:49  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 15:14:49  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 15:14:49  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 15:16:42  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 15:16:42  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 15:16:42  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 15:17:59  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 15:17:59  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 15:18:00  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 15:21:26  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 15:21:26  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 15:21:26  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 16:04:27  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 16:04:27  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:11), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:11))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:11))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 16:04:27  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 16:05:10  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 16:05:10  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:7), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:7))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:7))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 16:05:10  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+
+Aug 08 16:08:58  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => exceptionHandler
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::exceptionHandler prefix="" info="INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']"]
+)
+
+
+Aug 08 16:08:58  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(948): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::exceptionHandler(Object(DB_Error))
+#2 /var/www/html/sites/all/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#3 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#4 /var/www/html/sites/all/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "DB_Error", TRUE)
+#5 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1907): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...", "1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b'")
+#7 /var/www/html/sites/all/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/sites/all/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#9 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(2415): DB_common->query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#10 /var/www/html/sites/all/modules/civicrm/packages/DB/DataObject.php(1040): DB_DataObject->_query("INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , labe...")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/DAO.php(571): DB_DataObject->insert()
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Contact/BAO/RelationshipType.php(111): CRM_Core_DAO->save()
+#13 /var/www/html/sites/all/modules/civicrm/api/v3/utils.php(1289): CRM_Contact_BAO_RelationshipType::add((Array:11), (Array:1))
+#14 /var/www/html/sites/all/modules/civicrm/api/v3/RelationshipType.php(53): _civicrm_api3_basic_create("CRM_Contact_BAO_RelationshipType", (Array:11), "RelationshipType")
+#15 /var/www/html/sites/all/modules/civicrm/Civi/API/Provider/MagicFunctionProvider.php(89): civicrm_api3_relationship_type_create((Array:11))
+#16 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(169): Civi\API\Provider\MagicFunctionProvider->invoke((Array:9))
+#17 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#18 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("RelationshipType", "create", (Array:10), NULL)
+#19 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(234): civicrm_api("RelationshipType", "create", (Array:10))
+#20 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(179): CRM_Core_ManagedEntities->insertNewEntity((Array:6))
+#21 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(141): CRM_Core_ManagedEntities->reconcileEnabledModule(Object(CRM_Core_Module), (Array:3))
+#22 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(122): CRM_Core_ManagedEntities->reconcileEnabledModules()
+#23 /var/www/html/sites/all/modules/civicrm/CRM/Core/ManagedEntities.php(56): CRM_Core_ManagedEntities->reconcile()
+#24 [internal function](): CRM_Core_ManagedEntities::{closure}()
+#25 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(208): call_user_func_array(Object(Closure), (Array:0))
+#26 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Frame.php(158): Civi\Core\Transaction\Frame->invokeCallbacks(2)
+#27 /var/www/html/sites/all/modules/civicrm/Civi/Core/Transaction/Manager.php(117): Civi\Core\Transaction\Frame->finish()
+#28 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(142): Civi\Core\Transaction\Manager->dec()
+#29 /var/www/html/sites/all/modules/civicrm/CRM/Core/Transaction.php(129): CRM_Core_Transaction->commit()
+#30 /var/www/html/sites/all/modules/civicrm/Civi/API/Subscriber/TransactionSubscriber.php(158): CRM_Core_Transaction->__destruct()
+#31 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(184): Civi\API\Subscriber\TransactionSubscriber->onApiRespond(Object(Civi\API\Event\RespondEvent), "civi.api.respond", Object(Civi\Core\CiviEventDispatcher))
+#32 /var/www/html/sites/all/modules/civicrm/vendor/symfony/event-dispatcher/EventDispatcher.php(46): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch((Array:4), "civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#33 /var/www/html/sites/all/modules/civicrm/Civi/Core/CiviEventDispatcher.php(47): Symfony\Component\EventDispatcher\EventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#34 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(276): Civi\Core\CiviEventDispatcher->dispatch("civi.api.respond", Object(Civi\API\Event\RespondEvent))
+#35 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(171): Civi\API\Kernel->respond(Object(Civi\API\Provider\MagicFunctionProvider), (Array:9), (Array:5))
+#36 /var/www/html/sites/all/modules/civicrm/Civi/API/Kernel.php(100): Civi\API\Kernel->runRequest((Array:9))
+#37 /var/www/html/sites/all/modules/civicrm/api/api.php(23): Civi\API\Kernel->runSafe("CaseType", "create", (Array:10), NULL)
+#38 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(311): civicrm_api("CaseType", "create", (Array:10))
+#39 /var/www/html/sites/all/modules/civicrm/CRM/Utils/REST.php(548): CRM_Utils_REST::process((Array:3), (Array:10))
+#40 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(275): CRM_Utils_REST::ajax()
+#41 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:12))
+#42 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#43 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#44 /var/www/html/includes/menu.inc(527): civicrm_invoke("ajax", "rest")
+#45 /var/www/html/index.php(21): menu_execute_active_handler()
+#46 {main}
+
+
+Aug 08 16:08:58  [info] $ManagedEntities_failed = Array
+(
+    [entity] => RelationshipType
+    [action] => create
+    [params] => Array
+        (
+            [version] => 3
+            [name_a_b] => Benefits Specialist is
+            [name_b_a] => Benefits Specialist
+            [label_a_b] => Benefits Specialist is
+            [label_b_a] => Benefits Specialist
+            [description] => Benefits Specialist
+            [contact_type_a] => Individual
+            [contact_type_b] => Individual
+            [contact_sub_type_a] => 
+            [contact_sub_type_b] => 
+        )
+
+    [result] => Array
+        (
+            [error_code] => already exists
+            [sql] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+            [tip] => add debug=1 to your API call to have more info about the error
+            [is_error] => 1
+            [error_message] => DB Error: already exists
+            [debug_information] => INSERT INTO civicrm_relationship_type (name_a_b , label_a_b , name_b_a , label_b_a , description , contact_type_a , contact_type_b , is_active ) VALUES ('Benefits Specialist is' , 'Benefits Specialist is' , 'Benefits Specialist' , 'Benefits Specialist' , 'Benefits Specialist' , 'Individual' , 'Individual' ,  1 )  [nativecode=1062 ** Duplicate entry 'Benefits Specialist is' for key 'UI_name_a_b']
+        )
+
+)
+
+

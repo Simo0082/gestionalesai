@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-16 18:24:01
+<?php /* Smarty version 2.6.31, created on 2023-09-21 17:30:57
          compiled from CRM/Custom/Form/Edit/CustomData.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Custom/Form/Edit/CustomData.tpl', 1, false),array('block', 'ts', 'CRM/Custom/Form/Edit/CustomData.tpl', 3, false),array('function', 'crmKey', 'CRM/Custom/Form/Edit/CustomData.tpl', 4, false),)), $this); ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-18 21:49:25
+<?php /* Smarty version 2.6.31, created on 2023-09-26 11:40:04
          compiled from CRM/Case/Form/Case.hlp */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Case/Form/Case.hlp', 1, false),array('block', 'htxt', 'CRM/Case/Form/Case.hlp', 31, false),array('block', 'ts', 'CRM/Case/Form/Case.hlp', 32, false),)), $this); ?>

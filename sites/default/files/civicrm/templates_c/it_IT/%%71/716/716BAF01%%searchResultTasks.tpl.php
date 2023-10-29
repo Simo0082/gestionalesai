@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-22 23:00:07
+<?php /* Smarty version 2.6.31, created on 2023-09-26 14:41:16
          compiled from CRM/common/searchResultTasks.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/common/searchResultTasks.tpl', 1, false),array('block', 'ts', 'CRM/common/searchResultTasks.tpl', 32, false),array('function', 'help', 'CRM/common/searchResultTasks.tpl', 35, false),)), $this); ?>

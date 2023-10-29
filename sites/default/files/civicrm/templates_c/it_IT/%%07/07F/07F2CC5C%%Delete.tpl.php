@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-22 23:01:36
+<?php /* Smarty version 2.6.31, created on 2023-10-18 09:37:19
          compiled from CRM/Contact/Form/Task/Delete.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Contact/Form/Task/Delete.tpl', 1, false),array('block', 'ts', 'CRM/Contact/Form/Task/Delete.tpl', 31, false),)), $this); ?>

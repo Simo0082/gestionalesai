@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-07-22 23:01:19
+<?php /* Smarty version 2.6.31, created on 2023-09-20 21:46:28
          compiled from CRM/Contact/Form/Search/Criteria/DisplaySettings.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Contact/Form/Search/Criteria/DisplaySettings.tpl', 1, false),array('function', 'help', 'CRM/Contact/Form/Search/Criteria/DisplaySettings.tpl', 6, false),)), $this); ?>
