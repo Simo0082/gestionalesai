@@ -24,23 +24,22 @@
  +--------------------------------------------------------------------+
 *}
 
-PAGINA DEGLI INDICATORI DEL CONTATTO {$contactId}:
+{php}
 
+include 'scripts/kpi_calculator.php';
+
+$contact_Id= $this->get_template_vars('contactId');
+
+$compet_ling_score = calc_compet_ling($contact_Id); 
+
+{/php}
+
+PAGINA DEGLI INDICATORI ( CONTATTO {$contactId} )
+
+<br><br>
 <br>
-dasdasdasd
-adasd
-asd
-asd
-as
-das
-das
-das
-da
-dada
-asd
-a
-dada
 
-{$contactId}
+<style="bold">COMPETENZE LINGUISTICHE:</style> {php}echo $compet_ling_score{/php}
+
 
 <br>

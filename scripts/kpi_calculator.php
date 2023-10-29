@@ -1,27 +1,23 @@
 <?php
 
-$conn = db_connection();
+//$conn = db_connection();
 //$contact_id = "12299";  #adulto test
 $contact_id = "12311";  #MSNA test
 
 
 
-$contact_type = detect_contact_type($conn, $contact_id);
+//$contact_type = detect_contact_type($conn, $contact_id);
 //echo $contact_type;
 
-$compet_ling_value = calc_compet_ling($conn, $contact_id, $contact_type);
-echo "PUNTEGGIO COMPETENZE LINGUISTICHE: ".$compet_ling_value."\n";
-
-
-
-
+$compet_ling_value = calc_compet_ling($contact_id);
+//echo "PUNTEGGIO COMPETENZE LINGUISTICHE: ".$compet_ling_value."\n";
 
 function detect_contact_type($conn, $contact_id){
 
 	$query_get_contact_type = "SELECT contact_sub_type FROM civicrm_contact WHERE id = ".$contact_id." LIMIT 1";
 	$var_contact_type   = mysqli_query($conn, $query_get_contact_type);
          if(mysqli_num_rows($var_contact_type) == 0){
-                echo "contatto non trovato";
+                //echo "contatto non trovato";
                 return "ND";
         }
         $c_type = mysqli_fetch_row($var_contact_type)[0];
@@ -31,14 +27,18 @@ function detect_contact_type($conn, $contact_id){
 
 }
 
-function calc_compet_ling($conn, $contact_id, $contact_type){
+function calc_compet_ling($contact_id){
 	//$contact_type = "Student";
-	echo "verifico contatto di tipo:    ".$contact_type;
+
+	$conn = db_connection();
+	
+	$contact_type = detect_contact_type($conn,$contact_id);
+	//echo "verifico contatto di tipo:    ".$contact_type;
 
         switch ($contact_type) {
 
 		case "Student":
-			echo "entro in adulto";
+			//echo "entro in adulto";
 			#Variabili: test ingresso italiano; corsi di italiano frequentati; frequenza corsi scolastici; livello certificazione conseguito; obiettivo 
 			$query_test_ingresso = "SELECT test_di_ingresso_italiano_o_live_381 FROM civicrm_value_competenze_li_57 WHERE entity_id = ".$contact_id." LIMIT 1";
 			$query_freq_corsi_ita = "SELECT count(*) FROM `civicrm_case_contact` JOIN civicrm_case ON `civicrm_case_contact`.`case_id` = civicrm_case.id where 
@@ -108,11 +108,11 @@ function calc_compet_ling($conn, $contact_id, $contact_type){
 function kpi_compet_ling_calculator($param_test_ingresso, $param_freq_corsi_italiano, $param_freq_scolastica, $param_cert_italiano, $param_livello_pei){
 
 	$compet_lang_score = "ND";
-	echo "TEST INGRESSO: ".$param_test_ingresso."\n";
-        echo "FREQ. CORSI ITALIANO: ".$param_freq_corsi_italiano."\n";
-        echo "FREQ. SCOLASTICA: ".$param_freq_scolastica."\n";
-        echo "CERT. ITALIANO: ".var_dump($param_cert_italiano)."\n";
-        echo "LIVELLO PEI: ".$param_livello_pei."\n";
+	//echo "TEST INGRESSO: ".$param_test_ingresso."\n";
+        //echo "FREQ. CORSI ITALIANO: ".$param_freq_corsi_italiano."\n";
+        //echo "FREQ. SCOLASTICA: ".$param_freq_scolastica."\n";
+        //echo "CERT. ITALIANO: ".var_dump($param_cert_italiano)."\n";
+        //echo "LIVELLO PEI: ".$param_livello_pei."\n";
 
 
 	if(($param_test_ingresso == "PRE-A1" || $param_test_ingresso == "A1") && $param_freq_corsi_italiano == "0"){
@@ -146,15 +146,6 @@ function kpi_compet_ling_calculator($param_test_ingresso, $param_freq_corsi_ital
 }
 
 
-
-
-
-
-
-
-
-
-
 function db_connection(){
 	$servername = "localhost";
 	$username = "sammartini";
@@ -167,14 +158,6 @@ function db_connection(){
 
 	return $conn;
 
-
-
 }
-
-
-
-
-
-
 
 ?>
