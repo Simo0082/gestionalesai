@@ -31,7 +31,7 @@ include 'scripts/kpi_calculator.php';
 $contact_Id= $this->get_template_vars('contactId');
 
 $compet_ling_score = calc_compet_ling($contact_Id); 
-
+$compet_form_score = calc_sviluppo_formazione_professionale($contact_Id);
 {/php}
 
 PAGINA DEGLI INDICATORI ( CONTATTO {$contactId} )
@@ -40,6 +40,9 @@ PAGINA DEGLI INDICATORI ( CONTATTO {$contactId} )
 <br>
 
 <style="bold">COMPETENZE LINGUISTICHE:</style> {php}echo $compet_ling_score{/php}
+<br>
+<br>
+<style="bold">SVILUPPO FORMAZIONE PROFESSIONALE:</style> {php}echo $compet_form_score{/php}
 
 
 <br>

@@ -1,16 +1,75 @@
 <?php
 
 //$conn = db_connection();
-//$contact_id = "12299";  #adulto test
-$contact_id = "12311";  #MSNA test
+$contact_id = "12299";  #adulto test
+#$contact_id = "12311";  #MSNA test
 
 
 
 //$contact_type = detect_contact_type($conn, $contact_id);
 //echo $contact_type;
 
-$compet_ling_value = calc_compet_ling($contact_id);
+#$compet_ling_value = calc_compet_ling($contact_id);
 //echo "PUNTEGGIO COMPETENZE LINGUISTICHE: ".$compet_ling_value."\n";
+//calc_sviluppo_formazione_professionale($contact_id);
+
+//echo "PUNTEGGIO FORMAZIONE PROFESSIONALE =".calc_sviluppo_formazione_professionale($contact_id);
+
+function calc_sviluppo_formazione_professionale($contact_id){
+        //$contact_type = "Student";
+
+        $conn = db_connection();
+
+        $contact_type = detect_contact_type($conn,$contact_id);
+        //echo "verifico contatto di tipo:    ".$contact_type;
+
+        switch ($contact_type) {
+
+                case "Student":
+                        //echo "entro in adulto";
+                        $query_obiettivo_formativo_pei = "SELECT obiettivo_formativo_alla_stesura_389 FROM civicrm_value_competenze_pr_58  WHERE entity_id = ".$contact_id." LIMIT 1";
+			$query_corso_formazione_profes = "SELECT count(*) FROM `civicrm_case_contact` JOIN civicrm_case ON `civicrm_case_contact`.`case_id` = civicrm_case.id where
+                                civicrm_case.case_type_id = 11 AND civicrm_case_contact.contact_id = ".$contact_id." AND civicrm_case.is_deleted=0";
+			$query_attestato_corso_formaz  = "SELECT civicrm_value_frequenza_cor_81.ha_conseguito_un_attestato_nei_c_608 FROM `civicrm_case_contact` JOIN civicrm_case ON `civicrm_case_contact`.`case_id` = civicrm_case.id JOIN civicrm_value_frequenza_cor_81 ON civicrm_case.id = civicrm_value_frequenza_cor_81.entity_id where contact_id = ".$contact_id." and civicrm_case.is_deleted =0";
+
+			
+		break;
+
+		case "MSNA":
+
+			$query_obiettivo_formativo_pei = "SELECT obiettivo_formativo_alla_stesura_389 FROM civicrm_value_competenze_pr_58  WHERE entity_id = ".$contact_id." LIMIT 1";
+                        $query_corso_formazione_profes = "SELECT count(*) FROM `civicrm_case_contact` JOIN civicrm_case ON `civicrm_case_contact`.`case_id` = civicrm_case.id where civicrm_case.case_type_id = 11 AND civicrm_case_contact.contact_id = ".$contact_id." AND civicrm_case.is_deleted=0";
+                        $query_attestato_corso_formaz  = "SELECT civicrm_value_frequenza_cor_81.ha_conseguito_un_attestato_nei_c_608 FROM `civicrm_case_contact` JOIN civicrm_case ON `civicrm_case_contact`.`case_id` = civicrm_case.id JOIN civicrm_value_frequenza_cor_81 ON civicrm_case.id = civicrm_value_frequenza_cor_81.entity_id where contact_id = ".$contact_id." and civicrm_case.is_deleted =0";
+
+
+		break;
+	}
+
+        
+                        $var_obiettivo_formativo_pei	= mysqli_query($conn, $query_obiettivo_formativo_pei);
+			$var_corso_formazione_profes	= mysqli_query($conn, $query_corso_formazione_profes);
+			$var_attestato_corso_formaz	= mysqli_query($conn, $query_attestato_corso_formaz);	
+                 	
+			//if(mysqli_num_rows($var_obiettivo_formativo_pei) == 0 || mysqli_num_rows($var_corso_formazione_profes) == 0 || mysqli_num_rows($var_attestato_corso_formaz) == 0){
+       				
+			//	return "ND";
+	
+                        //}
+
+			$param_obiettivo_formativo_pei = mysqli_fetch_row($var_obiettivo_formativo_pei)[0];
+			$param_corso_formazione_profes = mysqli_fetch_row($var_corso_formazione_profes)[0];
+			$param_attestato_corso_formaz  = mysqli_fetch_row($var_attestato_corso_formaz)[0];
+			
+	
+		        //echo $param_obiettivo_formativo_pei."\n";
+			//echo "corsi formazione prof".$param_corso_formazione_profes."\n";
+			//echo $param_attestato_corso_formaz."\n";
+			
+			return kpi_formaz_calculator($param_obiettivo_formativo_pei,$param_corso_formazione_profes,$param_attestato_corso_formaz);
+
+}	
+
+
 
 function detect_contact_type($conn, $contact_id){
 
@@ -103,6 +162,48 @@ function calc_compet_ling($contact_id){
 		
 
 }
+
+
+function kpi_formaz_calculator($param_obiettivo_formativo_pei,$param_corso_formazione_profes,$param_attestato_corso_formaz){
+		
+	  $formaz_score = "ND";
+
+	
+
+        if($param_obiettivo_formativo_pei== 0 && $param_corso_formazione_profes == 0){
+
+                $formaz_score= 1;
+        }
+        
+        if($param_corso_formazione_profes == 0  && $param_attestato_corso_formaz <= 0 ){
+		
+		$formaz_score = 2;
+	}
+
+	if($param_corso_formazione_profes == 1  && $param_attestato_corso_formaz <= 0  ){
+
+		$formaz_score = 3;
+
+        }
+
+	 if($param_corso_formazione_profes == 1  && $param_attestato_corso_formaz == 5  ){
+
+		 $formaz_score = 4;
+
+	 }
+
+	 if($param_corso_formazione_profes == "1"  && $param_attestato_corso_formaz == "6"  ){
+
+                 $formaz_score = 5;
+
+         }
+
+	return $formaz_score;
+
+}
+
+
+
 
 	
 function kpi_compet_ling_calculator($param_test_ingresso, $param_freq_corsi_italiano, $param_freq_scolastica, $param_cert_italiano, $param_livello_pei){

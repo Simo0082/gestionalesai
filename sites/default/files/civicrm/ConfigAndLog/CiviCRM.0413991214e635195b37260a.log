@@ -443,3 +443,198 @@ Oct 27 21:36:05  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/
 #5 {main}
 
 
+Oct 30 14:59:29  [info] $Fatal Error Details = Array
+(
+    [message] => Il tipo di relazione Senior Services Coordinator, trovata nel file di configurazione del caso, non è presente nel database <a href="https://docs.civicrm.org/user/en/stable/case-management/set-up"  target="_blank" class="crm-doc-link no-popup" title="Apre la documentazione in una nuova finestra.">(learn Altro...)</a>
+    [code] => 
+)
+
+
+Oct 30 14:59:29  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(223): CRM_Core_Error::fatal("Il tipo di relazione Senior Services Coordinator, trovata nel file di configu...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(109): CRM_Case_XMLProcessor_Process->createRelationships("Senior Services Coordinator", (Array:14))
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(59): CRM_Case_XMLProcessor_Process->process(Object(SimpleXMLElement), (Array:14))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Activity/OpenCase.php(340): CRM_Case_XMLProcessor_Process->run("presa_in_carico", (Array:14))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Case.php(401): CRM_Case_Form_Activity_OpenCase::endPostProcess(Object(CRM_Case_Form_Case), (Array:28))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(489): CRM_Case_Form_Case->postProcess()
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Case_Form_Case), "upload")
+#9 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Case_Form_Case), "upload")
+#10 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_Case), "upload")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Case_Form_Case", "Apri caso", (Array:0))
+#14 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#15 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#16 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#17 /var/www/html/includes/menu.inc(527): civicrm_invoke("case", "add")
+#18 /var/www/html/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 30 15:00:00  [info] $Fatal Error Details = Array
+(
+    [message] => Il tipo di relazione Senior Services Coordinator, trovata nel file di configurazione del caso, non è presente nel database <a href="https://docs.civicrm.org/user/en/stable/case-management/set-up"  target="_blank" class="crm-doc-link no-popup" title="Apre la documentazione in una nuova finestra.">(learn Altro...)</a>
+    [code] => 
+)
+
+
+Oct 30 15:00:00  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(223): CRM_Core_Error::fatal("Il tipo di relazione Senior Services Coordinator, trovata nel file di configu...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(109): CRM_Case_XMLProcessor_Process->createRelationships("Senior Services Coordinator", (Array:14))
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(59): CRM_Case_XMLProcessor_Process->process(Object(SimpleXMLElement), (Array:14))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Activity/OpenCase.php(340): CRM_Case_XMLProcessor_Process->run("presa_in_carico", (Array:14))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Case.php(401): CRM_Case_Form_Activity_OpenCase::endPostProcess(Object(CRM_Case_Form_Case), (Array:25))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(489): CRM_Case_Form_Case->postProcess()
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Case_Form_Case), "upload")
+#9 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Case_Form_Case), "upload")
+#10 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_Case), "upload")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Case_Form_Case", "Apri caso", (Array:0))
+#14 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#15 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#16 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#17 /var/www/html/includes/menu.inc(527): civicrm_invoke("case", "add")
+#18 /var/www/html/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 30 15:01:21  [info] $Fatal Error Details = Array
+(
+    [message] => Il tipo di relazione Senior Services Coordinator, trovata nel file di configurazione del caso, non è presente nel database <a href="https://docs.civicrm.org/user/en/stable/case-management/set-up"  target="_blank" class="crm-doc-link no-popup" title="Apre la documentazione in una nuova finestra.">(learn Altro...)</a>
+    [code] => 
+)
+
+
+Oct 30 15:01:21  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(223): CRM_Core_Error::fatal("Il tipo di relazione Senior Services Coordinator, trovata nel file di configu...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(109): CRM_Case_XMLProcessor_Process->createRelationships("Senior Services Coordinator", (Array:13))
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(59): CRM_Case_XMLProcessor_Process->process(Object(SimpleXMLElement), (Array:13))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Activity/OpenCase.php(340): CRM_Case_XMLProcessor_Process->run("presa_in_carico", (Array:13))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Case.php(401): CRM_Case_Form_Activity_OpenCase::endPostProcess(Object(CRM_Case_Form_Case), (Array:24))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(489): CRM_Case_Form_Case->postProcess()
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Case_Form_Case), "upload")
+#9 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Case_Form_Case), "upload")
+#10 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_Case), "upload")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Case_Form_Case", "Apri caso", (Array:0))
+#14 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#15 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#16 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#17 /var/www/html/includes/menu.inc(527): civicrm_invoke("case", "add")
+#18 /var/www/html/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 30 15:03:16  [info] $Fatal Error Details = Array
+(
+    [message] => Il tipo di relazione Senior Services Coordinator, trovata nel file di configurazione del caso, non è presente nel database <a href="https://docs.civicrm.org/user/en/stable/case-management/set-up"  target="_blank" class="crm-doc-link no-popup" title="Apre la documentazione in una nuova finestra.">(learn Altro...)</a>
+    [code] => 
+)
+
+
+Oct 30 15:03:16  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(223): CRM_Core_Error::fatal("Il tipo di relazione Senior Services Coordinator, trovata nel file di configu...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(109): CRM_Case_XMLProcessor_Process->createRelationships("Senior Services Coordinator", (Array:13))
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(59): CRM_Case_XMLProcessor_Process->process(Object(SimpleXMLElement), (Array:13))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Activity/OpenCase.php(340): CRM_Case_XMLProcessor_Process->run("presa_in_carico", (Array:13))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Case.php(401): CRM_Case_Form_Activity_OpenCase::endPostProcess(Object(CRM_Case_Form_Case), (Array:27))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(489): CRM_Case_Form_Case->postProcess()
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Case_Form_Case), "upload")
+#9 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Case_Form_Case), "upload")
+#10 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_Case), "upload")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Case_Form_Case", "Apri caso", (Array:0))
+#14 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#15 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#16 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#17 /var/www/html/includes/menu.inc(527): civicrm_invoke("case", "add")
+#18 /var/www/html/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 30 15:03:59  [info] $Fatal Error Details = Array
+(
+    [message] => Il tipo di relazione Senior Services Coordinator, trovata nel file di configurazione del caso, non è presente nel database <a href="https://docs.civicrm.org/user/en/stable/case-management/set-up"  target="_blank" class="crm-doc-link no-popup" title="Apre la documentazione in una nuova finestra.">(learn Altro...)</a>
+    [code] => 
+)
+
+
+Oct 30 15:03:59  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(223): CRM_Core_Error::fatal("Il tipo di relazione Senior Services Coordinator, trovata nel file di configu...")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(109): CRM_Case_XMLProcessor_Process->createRelationships("Senior Services Coordinator", (Array:14))
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Case/XMLProcessor/Process.php(59): CRM_Case_XMLProcessor_Process->process(Object(SimpleXMLElement), (Array:14))
+#4 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Activity/OpenCase.php(340): CRM_Case_XMLProcessor_Process->run("presa_in_carico", (Array:14))
+#5 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/Case.php(401): CRM_Case_Form_Activity_OpenCase::endPostProcess(Object(CRM_Case_Form_Case), (Array:25))
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(489): CRM_Case_Form_Case->postProcess()
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Case_Form_Case), "upload")
+#9 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Case_Form_Case), "upload")
+#10 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_Case), "upload")
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#12 /var/www/html/sites/all/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#13 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Case_Form_Case", "Apri caso", (Array:0))
+#14 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#15 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#16 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:3))
+#17 /var/www/html/includes/menu.inc(527): civicrm_invoke("case", "add")
+#18 /var/www/html/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 30 15:04:06  [info] $Fatal Error Details = Array
+(
+    [message] => Non hai i permessi sufficienti per visualizzare questa pagina.
+    [code] => 
+)
+
+
+Oct 30 15:04:06  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/CaseView.php(77): CRM_Core_Error::fatal("Non hai i permessi sufficienti per visualizzare questa pagina.")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(585): CRM_Case_Form_CaseView->preProcess()
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Display.php(92): CRM_Core_Form->buildForm()
+#4 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Case_Form_CaseView), "display")
+#5 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_CaseView), "display")
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("display")
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Case/Page/Tab.php(109): CRM_Core_Controller->run()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Case/Page/Tab.php(196): CRM_Case_Page_Tab->view()
+#9 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(309): CRM_Case_Page_Tab->run((Array:4), NULL)
+#10 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:13))
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:4))
+#12 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:4))
+#13 /var/www/html/includes/menu.inc(527): civicrm_invoke("contact", "view", "case")
+#14 /var/www/html/index.php(21): menu_execute_active_handler()
+#15 {main}
+
+
+Oct 30 15:04:09  [info] $Fatal Error Details = Array
+(
+    [message] => Non hai i permessi sufficienti per visualizzare questa pagina.
+    [code] => 
+)
+
+
+Oct 30 15:04:09  [info] $backTrace = #0 /var/www/html/sites/all/modules/civicrm/CRM/Core/Error.php(381): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/sites/all/modules/civicrm/CRM/Case/Form/CaseView.php(77): CRM_Core_Error::fatal("Non hai i permessi sufficienti per visualizzare questa pagina.")
+#2 /var/www/html/sites/all/modules/civicrm/CRM/Core/Form.php(585): CRM_Case_Form_CaseView->preProcess()
+#3 /var/www/html/sites/all/modules/civicrm/CRM/Core/QuickForm/Action/Display.php(92): CRM_Core_Form->buildForm()
+#4 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Display->perform(Object(CRM_Case_Form_CaseView), "display")
+#5 /var/www/html/sites/all/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Case_Form_CaseView), "display")
+#6 /var/www/html/sites/all/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("display")
+#7 /var/www/html/sites/all/modules/civicrm/CRM/Case/Page/Tab.php(109): CRM_Core_Controller->run()
+#8 /var/www/html/sites/all/modules/civicrm/CRM/Case/Page/Tab.php(196): CRM_Case_Page_Tab->view()
+#9 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(309): CRM_Case_Page_Tab->run((Array:4), NULL)
+#10 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:13))
+#11 /var/www/html/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:4))
+#12 /var/www/html/sites/all/modules/civicrm/drupal/civicrm.module(445): CRM_Core_Invoke::invoke((Array:4))
+#13 /var/www/html/includes/menu.inc(527): civicrm_invoke("contact", "view", "case")
+#14 /var/www/html/index.php(21): menu_execute_active_handler()
+#15 {main}
+
+
