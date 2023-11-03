@@ -12,8 +12,79 @@ $contact_id = "12299";  #adulto test
 #$compet_ling_value = calc_compet_ling($contact_id);
 //echo "PUNTEGGIO COMPETENZE LINGUISTICHE: ".$compet_ling_value."\n";
 //calc_sviluppo_formazione_professionale($contact_id);
+//calc_benessere_psicofisico($contact_id);
 
+
+//echo "PUNTEGGIO BENESSERE =".calc_benessere_psicofisico($contact_id);
 //echo "PUNTEGGIO FORMAZIONE PROFESSIONALE =".calc_sviluppo_formazione_professionale($contact_id);
+
+echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
+
+
+
+
+function calc_abitare($contact_id){
+
+	$conn = db_connection();
+	
+	$query_abitare				= "SELECT supporto_nella_ricerca_di_soluzi_536 FROM civicrm_value_ricerca_soluz_65 WHERE entity_id = ".$contact_id." LIMIT 1";
+
+	$var_abitare				= mysqli_query($conn,$query_abitare);
+	$param_abitare				= mysqli_fetch_row($var_abitare)[0];
+
+	return kpi_abitare_calculator($param_abitare);
+}
+
+
+
+function calc_benessere_psicofisico($contact_id){
+	
+	$conn = db_connection();
+	$contact_type = detect_contact_type($conn,$contact_id);
+
+	switch ($contact_type) {
+
+		case "Student":
+
+		$query_attivita_ricreative_enti 	= "SELECT partecipazioni_a_laboratori_o_at_457 FROM civicrm_value_attivita_ricr_62 WHERE entity_id = ".$contact_id." LIMIT 1";
+		$query_attivita_ricreative_altri 	= "SELECT partecipazioni_a_laboratori_o_at_458 FROM civicrm_value_attivita_ricr_62 WHERE entity_id = ".$contact_id." LIMIT 1";
+		$query_iniziative_sportive		= "SELECT partecipazione_a_iniziative_spor_459 FROM civicrm_value_attivita_ricr_62 WHERE entity_id = ".$contact_id." LIMIT 1";
+		$query_cura_gestione_igiene		= "SELECT cura_e_gestione_dell_igiene_pers_432 FROM civicrm_value_salute_e_cura_60 WHERE entity_id = ".$contact_id." LIMIT 1";
+		$query_cura_gestione_salute		= "SELECT cura_e_gestione_di_eventuali_pro_433 FROM civicrm_value_salute_e_cura_60 WHERE entity_id = ".$contact_id." LIMIT 1";	
+			
+                break;
+
+                case "MSNA":
+
+                $query_attivita_ricreative_enti         = "SELECT partecipazioni_a_laboratori_o_at_462 FROM civicrm_value_attivita_ricr_61 WHERE entity_id = ".$contact_id." LIMIT 1";
+                $query_attivita_ricreative_altri        = "SELECT partecipazioni_a_laboratori_o_at_463 FROM civicrm_value_attivita_ricr_62 WHERE entity_id = ".$contact_id." LIMIT 1";
+                $query_iniziative_sportive              = "SELECT partecipazione_a_iniziative_spor_464 FROM civicrm_value_attivita_ricr_62 WHERE entity_id = ".$contact_id." LIMIT 1";
+                $query_cura_gestione_igiene		= "SELECT cura_e_gestione_dell_igiene_pers_436 FROM civicrm_value_salute_e_cura_59 WHERE entity_id = ".$contact_id." LIMIT 1";
+                $query_cura_gestione_salute		= "SELECT cura_e_gestione_di_eventuali_pro_437 FROM civicrm_value_salute_e_cura_59 WHERE entity_id = ".$contact_id." LIMIT 1";
+
+                break;
+        }
+
+
+		$var_attivita_ricreative_enti	= mysqli_query($conn, $query_attivita_ricreative_enti);
+		$var_attivita_ricreative_altri	= mysqli_query($conn, $query_attivita_ricreative_altri);
+		$var_iniziative_sportive	= mysqli_query($conn, $query_iniziative_sportive);
+		$var_cura_gestione_igiene	= mysqli_query($conn, $query_cura_gestione_igiene);		
+		$var_cura_gestione_salute	= mysqli_query($conn, $query_cura_gestione_salute);
+
+		$param_attivita_ricreative_enti	 = mysqli_fetch_row($var_attivita_ricreative_enti)[0];
+		$param_attivita_ricreative_altri = mysqli_fetch_row($var_attivita_ricreative_altri)[0];
+		$param_iniziative_sportive	 = mysqli_fetch_row($var_iniziative_sportive)[0];
+		$param_cura_gestione_igiene	 = mysqli_fetch_row($var_cura_gestione_igiene)[0];
+		$param_cura_gestione_salute	 = mysqli_fetch_row($var_cura_gestione_salute)[0];
+
+
+
+return kpi_benessere_calculator($param_attivita_ricreative_enti,$param_attivita_ricreative_altri,$param_iniziative_sportive,$param_cura_gestione_igiene,$param_cura_gestione_salute);	
+
+	
+}
+
 
 function calc_sviluppo_formazione_professionale($contact_id){
         //$contact_type = "Student";
@@ -245,6 +316,56 @@ function kpi_compet_ling_calculator($param_test_ingresso, $param_freq_corsi_ital
 	return $compet_lang_score;
 
 }
+
+
+
+
+function kpi_benessere_calculator($param_attivita_ricreative_enti,$param_attivita_ricreative_altri,$param_iniziative_sportive,$param_cura_gestione_igiene,$param_cura_gestione_salute){
+
+	$benessere_score = "ND";
+
+
+	if (($param_attivita_ricreative_enti < 2 && $param_attivita_ricreative_altri < 2) && ($param_cura_gestione_igiene <= 1 || $param_cura_gestione_salute <= 1) ){
+
+		$benessere_score = 1;
+	}
+
+	else if(($param_attivita_ricreative_enti >= 2 || $param_attivita_ricreative_altri >= 2) && ($param_cura_gestione_igiene <= 1 || $param_cura_gestione_salute <= 1)){
+
+                $benessere_score = 2;
+        }
+
+	else if(($param_attivita_ricreative_enti < 2 && $param_attivita_ricreative_altri < 2) && ($param_cura_gestione_igiene >= 2 && $param_cura_gestione_salute >= 2)){
+
+		$benessere_score = 3;
+	}
+
+	else if(($param_attivita_ricreative_enti >= 2 || $param_attivita_ricreative_altri >= 2) && ($param_cura_gestione_igiene == 2 && $param_cura_gestione_salute == 2)){
+
+		$benessere_score = 4;
+        }
+
+	else if(($param_attivita_ricreative_enti >= 2 || $param_attivita_ricreative_altri >= 2) && ($param_cura_gestione_igiene == 3 && $param_cura_gestione_salute == 3)){
+
+		$benessere_score = 5;
+        }
+
+	
+	return $benessere_score;	
+
+}
+
+function kpi_abitare_calculator($param_abitare){
+
+	if($param_abitare < 1 )
+		
+		$abitare_score	= "ND";
+
+	else 	$abitare_score = $param_abitare;
+	return $abitare_score;
+
+}
+
 
 
 function db_connection(){

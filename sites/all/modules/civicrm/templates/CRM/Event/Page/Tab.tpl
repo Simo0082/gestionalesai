@@ -32,6 +32,8 @@ $contact_Id= $this->get_template_vars('contactId');
 
 $compet_ling_score = calc_compet_ling($contact_Id); 
 $compet_form_score = calc_sviluppo_formazione_professionale($contact_Id);
+$benessere_score   = calc_benessere_psicofisico($contact_Id);
+$abitare_score	   = calc_abitare($contact_id);
 {/php}
 
 PAGINA DEGLI INDICATORI ( CONTATTO {$contactId} )
@@ -43,6 +45,11 @@ PAGINA DEGLI INDICATORI ( CONTATTO {$contactId} )
 <br>
 <br>
 <style="bold">SVILUPPO FORMAZIONE PROFESSIONALE:</style> {php}echo $compet_form_score{/php}
-
+<br>
+<br>
+<style="bold">BENESSERE PSICOFISICO:</style> {php}echo $benessere_score{/php}
+<br>
+<br>
+<style="bold">ABITARE:</style> {php}echo $abitare_score{/php}
 
 <br>
