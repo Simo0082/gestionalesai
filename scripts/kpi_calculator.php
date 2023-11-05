@@ -18,8 +18,53 @@ $contact_id = "12299";  #adulto test
 //echo "PUNTEGGIO BENESSERE =".calc_benessere_psicofisico($contact_id);
 //echo "PUNTEGGIO FORMAZIONE PROFESSIONALE =".calc_sviluppo_formazione_professionale($contact_id);
 
-echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
+//echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
+//echo "PUNTEGGIO INSERIMENTO LAVORATOVIO: ".calc_inserimento_lavorativo($contact_id);
 
+function calc_inserimento_lavorativo($contact_id){
+
+	$conn = db_connection();
+	$contact_type = detect_contact_type($conn,$contact_id);
+
+	switch ($contact_type) {
+
+		case "Student":
+
+		$query_cond_professionale_ingresso	= "SELECT condizione_professionale_all_ing_530 FROM civicrm_value_sviluppo_prof_64 WHERE entity_id =".$contact_id." LIMIT 1";
+		$query_cond_professionale_attuale	= "SELECT condizione_professionale_attuale_531 FROM civicrm_value_sviluppo_prof_64 WHERE entity_id =".$contact_id." LIMIT 1";
+		$query_atteggiamento_proattivo_lav	= "SELECT atteggiamento_proattivo_nella_ri_532 FROM civicrm_value_sviluppo_prof_64 WHERE entity_id =".$contact_id." LIMIT 1";
+		$query_cond_professionale_dimissioni	= "SELECT condizione_professionale_alle_di_644 FROM civicrm_value_dimissioni_66 WHERE entity_id =".$contact_id." LIMIT 1";
+
+		break;
+
+		case "MSNA":
+
+
+		$query_cond_professionale_ingresso      = "SELECT condizione_professionale_all_ing_520 FROM civicrm_value_sviluppo_prof_63 WHERE entity_id =".$contact_id." LIMIT 1";
+                $query_cond_professionale_attuale       = "SELECT condizione_professionale_attuale_521 FROM civicrm_value_sviluppo_prof_63 WHERE entity_id =".$contact_id." LIMIT 1";
+                $query_atteggiamento_proattivo_lav      = "SELECT atteggiamento_proattivo_nella_ri_522 FROM civicrm_value_sviluppo_prof_63 WHERE entity_id =".$contact_id." LIMIT 1";
+                $query_cond_professionale_dimissioni    = "SELECT condizione_professionale_alle_di_644 FROM civicrm_value_dimissioni_66 WHERE entity_id =".$contact_id." LIMIT 1";
+
+		break;
+
+	}
+
+		$var_cond_professionale_ingresso	= mysqli_query($conn, $query_cond_professionale_ingresso);
+		$var_cond_professionale_attuale		= mysqli_query($conn, $query_cond_professionale_attuale);
+		$var_atteggiamento_proattivo_lav	= mysqli_query($conn, $query_atteggiamento_proattivo_lav);
+		$var_cond_professionale_dimissioni	= mysqli_query($conn, $query_cond_professionale_dimissioni);
+	
+		$param_cond_professionale_ingresso	= mysqli_fetch_row($var_cond_professionale_ingresso)[0];
+		$param_cond_professionale_attuale	= mysqli_fetch_row($var_cond_professionale_attuale)[0];
+		$param_atteggiamento_proattivo_lav	= mysqli_fetch_row($var_atteggiamento_proattivo_lav)[0];
+		$param_cond_professionale_dimissioni	= mysqli_fetch_row($var_cond_professionale_dimissioni)[0];
+		
+	return kpi_inserimento_lavorativo($param_cond_professionale_ingresso,$param_cond_professionale_attuale,$param_atteggiamento_proattivo_lav,$param_cond_professionale_dimissioni);
+
+
+
+
+}
 
 
 
@@ -228,10 +273,6 @@ function calc_compet_ling($contact_id){
 				return kpi_compet_ling_calculator($param_test_ingresso, $param_freq_corsi_italiano, $param_freq_scolastica, $param_cert_italiano, $param_livello_pei);
 
 
-
-
-		
-
 }
 
 
@@ -364,6 +405,44 @@ function kpi_abitare_calculator($param_abitare){
 	else 	$abitare_score = $param_abitare;
 	return $abitare_score;
 
+}
+
+
+
+
+function kpi_inserimento_lavorativo($param_cond_professionale_ingresso,$param_cond_professionale_attuale,$param_atteggiamento_proattivo_lav,$param_cond_professionale_dimissioni){
+
+	$cond_professionale_score = "ND";
+
+	if(($param_cond_professionale_attuale == 0) || ($param_cond_professionale_attuale == 1 && $param_atteggiamento_proattivo_lav <= 2)){
+
+		$cond_professionale_score = 1;
+	}
+
+	else if (($param_cond_professionale_attuale == 1 && $param_atteggiamento_proattivo_lav >= 3) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav <= 2)){
+
+		$cond_professionale_score = 2;
+	}
+
+	else if (($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav <= 2) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav >= 3)){
+	
+		 $cond_professionale_score = 3;
+        }
+	
+	
+	else if ($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav >= 3){
+
+		$cond_professionale_score = 4;
+        }
+
+	else if ($param_cond_professionale_attuale == 5){
+
+		$cond_professionale_score = 5;
+	}
+
+
+	return $cond_professionale_score;
+	
 }
 
 
