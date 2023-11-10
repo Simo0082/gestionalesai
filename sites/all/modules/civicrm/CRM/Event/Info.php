@@ -136,7 +136,8 @@ class CRM_Event_Info extends CRM_Core_Component_Info {
    */
   public function registerTab() {
     return array(
-      'title' => ts('Events'),
+	    /*   'title' => ts('Events'),*/
+      'title' => ts('Indicatori'),
       'id' => 'participant',
       'url' => 'participant',
       'weight' => 40,
@@ -148,7 +149,7 @@ class CRM_Event_Info extends CRM_Core_Component_Info {
    * @return string
    */
   public function getIcon() {
-    return 'crm-i fa-calendar';
+    return 'crm-i fa-calendari';
   }
 
   /**
