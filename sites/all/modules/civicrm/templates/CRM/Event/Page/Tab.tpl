@@ -33,8 +33,8 @@ $contact_Id= $this->get_template_vars('contactId');
 $compet_ling_score = calc_compet_ling($contact_Id); 
 $compet_form_score = calc_sviluppo_formazione_professionale($contact_Id);
 $benessere_score   = calc_benessere_psicofisico($contact_Id);
-$abitare_score	   = calc_abitare($contact_id);
-$lav_score	   = calc_inserimento_lavorativo($contact_id);
+$abitare_score	   = calc_abitare($contact_Id);
+$lav_score	   = calc_inserimento_lavorativo($contact_Id);
 {/php}
 
 PAGINA DEGLI INDICATORI ( CONTATTO {$contactId} )

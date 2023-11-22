@@ -1,7 +1,7 @@
 <?php
 
 //$conn = db_connection();
-$contact_id = "12299";  #adulto test
+$contact_id = "12292";  #adulto test
 #$contact_id = "12311";  #MSNA test
 
 
@@ -18,7 +18,7 @@ $contact_id = "12299";  #adulto test
 //echo "PUNTEGGIO BENESSERE =".calc_benessere_psicofisico($contact_id);
 //echo "PUNTEGGIO FORMAZIONE PROFESSIONALE =".calc_sviluppo_formazione_professionale($contact_id);
 
-//echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
+echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
 //echo "PUNTEGGIO INSERIMENTO LAVORATOVIO: ".calc_inserimento_lavorativo($contact_id);
 
 function calc_inserimento_lavorativo($contact_id){
@@ -166,11 +166,11 @@ function calc_sviluppo_formazione_professionale($contact_id){
 			$var_corso_formazione_profes	= mysqli_query($conn, $query_corso_formazione_profes);
 			$var_attestato_corso_formaz	= mysqli_query($conn, $query_attestato_corso_formaz);	
                  	
-			//if(mysqli_num_rows($var_obiettivo_formativo_pei) == 0 || mysqli_num_rows($var_corso_formazione_profes) == 0 || mysqli_num_rows($var_attestato_corso_formaz) == 0){
+			if(mysqli_num_rows($var_obiettivo_formativo_pei) == 0 || mysqli_num_rows($var_corso_formazione_profes) == 0 || mysqli_num_rows($var_attestato_corso_formaz) == 0){
        				
-			//	return "ND";
+				return "ND";
 	
-                        //}
+                        }
 
 			$param_obiettivo_formativo_pei = mysqli_fetch_row($var_obiettivo_formativo_pei)[0];
 			$param_corso_formazione_profes = mysqli_fetch_row($var_corso_formazione_profes)[0];
