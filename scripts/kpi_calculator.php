@@ -9,7 +9,7 @@ $contact_id = "12292";  #adulto test
 //$contact_type = detect_contact_type($conn, $contact_id);
 //echo $contact_type;
 
-#$compet_ling_value = calc_compet_ling($contact_id);
+//$compet_ling_value = calc_compet_ling($contact_id);
 //echo "PUNTEGGIO COMPETENZE LINGUISTICHE: ".$compet_ling_value."\n";
 //calc_sviluppo_formazione_professionale($contact_id);
 //calc_benessere_psicofisico($contact_id);
@@ -18,7 +18,7 @@ $contact_id = "12292";  #adulto test
 //echo "PUNTEGGIO BENESSERE =".calc_benessere_psicofisico($contact_id);
 //echo "PUNTEGGIO FORMAZIONE PROFESSIONALE =".calc_sviluppo_formazione_professionale($contact_id);
 
-echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
+//echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
 //echo "PUNTEGGIO INSERIMENTO LAVORATOVIO: ".calc_inserimento_lavorativo($contact_id);
 
 function calc_inserimento_lavorativo($contact_id){
@@ -166,11 +166,11 @@ function calc_sviluppo_formazione_professionale($contact_id){
 			$var_corso_formazione_profes	= mysqli_query($conn, $query_corso_formazione_profes);
 			$var_attestato_corso_formaz	= mysqli_query($conn, $query_attestato_corso_formaz);	
                  	
-			if(mysqli_num_rows($var_obiettivo_formativo_pei) == 0 || mysqli_num_rows($var_corso_formazione_profes) == 0 || mysqli_num_rows($var_attestato_corso_formaz) == 0){
+		//	if(mysqli_num_rows($var_obiettivo_formativo_pei) == 0 || mysqli_num_rows($var_corso_formazione_profes) == 0 || mysqli_num_rows($var_attestato_corso_formaz) == 0){
        				
-				return "ND";
+		//		return "ND";
 	
-                        }
+                //        }
 
 			$param_obiettivo_formativo_pei = mysqli_fetch_row($var_obiettivo_formativo_pei)[0];
 			$param_corso_formazione_profes = mysqli_fetch_row($var_corso_formazione_profes)[0];
@@ -255,14 +255,14 @@ function calc_compet_ling($contact_id){
 			$var_cert_italiano   = mysqli_query($conn, $query_certificato_ita);
 			$var_livello_pei     = mysqli_query($conn, $query_livello_pei);
 
-			if(mysqli_num_rows($var_test_ingresso) == 0 || mysqli_num_rows($var_freq_corsi_ita) == 0 || mysqli_num_rows($var_freq_scolastica) == 0 || mysqli_num_rows($var_cert_italiano) == 0 || mysqli_num_rows($var_livello_pei) == 0){
+		//	if(mysqli_num_rows($var_test_ingresso) == 0 || mysqli_num_rows($var_freq_corsi_ita) == 0 || mysqli_num_rows($var_freq_scolastica) == 0 || mysqli_num_rows($var_cert_italiano) == 0 || mysqli_num_rows($var_livello_pei) == 0){
 
-				$param_test_ingresso 		= "ND";
-				$param_freq_corsi_italiano	= "ND";
-				$param_freq_scolastica		= "ND";
-				$param_cert_italiano		= "ND";
-				$param_livello_pei		= "ND";
-			}	
+		//		$param_test_ingresso 		= "ND";
+		//		$param_freq_corsi_italiano	= "ND";
+		//		$param_freq_scolastica		= "ND";
+		//		$param_cert_italiano		= "ND";
+		//		$param_livello_pei		= "ND";
+		//	}	
                              
                                 $param_test_ingresso 		= mysqli_fetch_row($var_test_ingresso)[0];
 				$param_freq_corsi_italiano 	= mysqli_fetch_row($var_freq_corsi_ita)[0];
@@ -328,27 +328,27 @@ function kpi_compet_ling_calculator($param_test_ingresso, $param_freq_corsi_ital
         //echo "LIVELLO PEI: ".$param_livello_pei."\n";
 
 
-	if(($param_test_ingresso == "PRE-A1" || $param_test_ingresso == "A1") && $param_freq_corsi_italiano == "0"){
+	if(($param_test_ingresso ==1 || $param_test_ingresso == 2) && $param_freq_corsi_italiano == "0"){
 
 		$compet_lang_score = 1;
 	}
 	
-	else if($param_test_ingresso == "A2/B1"  && $param_freq_corsi_italiano == "0"){
+	if(($param_test_ingresso >= 4 && $param_test_ingresso <= 6)  && $param_freq_corsi_italiano == "0"){
 
                 $compet_lang_score = 2;
 	}
 
-	 else if(($param_test_ingresso == "PRE-A1" || $param_test_ingresso == "A1") && $param_freq_corsi_italiano > 0){
+	 if(($param_test_ingresso == 1 || $param_test_ingresso == 2) && $param_freq_corsi_italiano > 0){
 
                 $compet_lang_score = 3;
         }
 	 
-	 else if(($param_test_ingresso == "A2/B1" && $param_freq_corsi_italiano > 0) || ($param_test_ingresso == "B1/B2" )){
+	 if((($param_test_ingresso >= 4 && $param_test_ingresso <= 6) && $param_freq_corsi_italiano > 0) || ($param_test_ingresso >= 6 && $param_test_ingresso <= 9 )){
 
                 $compet_lang_score = 4;
 	 }
          
-	 else if(($param_test_ingresso == "C1" || $param_test_ingresso == "C2" || $param_livello_pei == "C1/C2")){
+	 if(($param_test_ingresso >= 10) || ($param_test_ingresso == $param_livello_pei)){
 
                 $compet_lang_score = 5;
          }
@@ -419,23 +419,23 @@ function kpi_inserimento_lavorativo($param_cond_professionale_ingresso,$param_co
 		$cond_professionale_score = 1;
 	}
 
-	else if (($param_cond_professionale_attuale == 1 && $param_atteggiamento_proattivo_lav >= 3) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav <= 2)){
+	if (($param_cond_professionale_attuale == 1 && $param_atteggiamento_proattivo_lav >= 3) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav <= 2)){
 
 		$cond_professionale_score = 2;
 	}
 
-	else if (($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav <= 2) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav >= 3)){
+         if (($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav <= 2) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav >= 3)){
 	
 		 $cond_professionale_score = 3;
         }
 	
 	
-	else if ($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav >= 3){
+         if ($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav >= 3){
 
 		$cond_professionale_score = 4;
         }
 
-	else if ($param_cond_professionale_attuale == 5){
+	if ($param_cond_professionale_attuale == 5){
 
 		$cond_professionale_score = 5;
 	}

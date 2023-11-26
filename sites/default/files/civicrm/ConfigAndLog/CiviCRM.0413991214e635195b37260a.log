@@ -1,0 +1,21 @@
+Nov 24 09:58:14  [warning] Deprecated function CRM_Core_OptionGroup::getLabel, use CRM_Core_PseudoConstant::getLabel.
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Nov 24 10:12:17  [warning] Deprecated function CRM_Core_OptionGroup::getLabel, use CRM_Core_PseudoConstant::getLabel.
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Nov 24 10:12:28  [warning] Deprecated function CRM_Core_OptionGroup::getLabel, use CRM_Core_PseudoConstant::getLabel.
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
