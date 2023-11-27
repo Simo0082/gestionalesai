@@ -19,7 +19,7 @@ $contact_id = "12292";  #adulto test
 //echo "PUNTEGGIO FORMAZIONE PROFESSIONALE =".calc_sviluppo_formazione_professionale($contact_id);
 
 //echo "PUNTEGGIO ABITARE: ".calc_abitare($contact_id);
-//echo "PUNTEGGIO INSERIMENTO LAVORATOVIO: ".calc_inserimento_lavorativo($contact_id);
+echo "PUNTEGGIO INSERIMENTO LAVORATOVIO: ".calc_inserimento_lavorativo($contact_id);
 
 function calc_inserimento_lavorativo($contact_id){
 
@@ -413,29 +413,42 @@ function kpi_abitare_calculator($param_abitare){
 function kpi_inserimento_lavorativo($param_cond_professionale_ingresso,$param_cond_professionale_attuale,$param_atteggiamento_proattivo_lav,$param_cond_professionale_dimissioni){
 
 	$cond_professionale_score = "ND";
+	$param_cond_prof_recente = "ND";
 
-	if(($param_cond_professionale_attuale == 0) || ($param_cond_professionale_attuale == 1 && $param_atteggiamento_proattivo_lav <= 2)){
+	
+	//Determino la condizione lavorativa più recente
+	if($param_cond_professionale_ingresso != "" && $param_cond_professionale_attuale == "" && $param_cond_professionale_dimissioni == "")
+		$param_cond_prof_recente = $param_cond_professionale_ingresso;
+
+	if($param_cond_professionale_attuale != "" && $param_cond_professionale_dimissioni == "")
+		$param_cond_prof_recente = $param_cond_professionale_attuale;
+	
+	if ($param_cond_professionale_dimissioni != "")
+	       	$param_cond_prof_recente = $param_cond_professionale_dimissioni;	
+
+
+	if(($param_cond_prof_recente == 0) || ($param_cond_prof_recente == 1 && $param_atteggiamento_proattivo_lav <= 2)){
 
 		$cond_professionale_score = 1;
 	}
 
-	if (($param_cond_professionale_attuale == 1 && $param_atteggiamento_proattivo_lav >= 3) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav <= 2)){
+	if (($param_cond_prof_recente == 1 && $param_atteggiamento_proattivo_lav >= 3) || ($param_cond_prof_recente == 2 && $param_atteggiamento_proattivo_lav <= 2)){
 
 		$cond_professionale_score = 2;
 	}
 
-         if (($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav <= 2) || ($param_cond_professionale_attuale == 2 && $param_atteggiamento_proattivo_lav >= 3)){
+         if (($param_cond_prof_recente == 3 && $param_atteggiamento_proattivo_lav <= 2) || ($param_cond_prof_recente == 2 && $param_atteggiamento_proattivo_lav >= 3)){
 	
 		 $cond_professionale_score = 3;
         }
 	
 	
-         if ($param_cond_professionale_attuale == 3 && $param_atteggiamento_proattivo_lav >= 3){
+         if ($param_cond_prof_recente == 3 && $param_atteggiamento_proattivo_lav >= 3){
 
 		$cond_professionale_score = 4;
         }
 
-	if ($param_cond_professionale_attuale == 5){
+	if ($param_cond_prof_recente == 5){
 
 		$cond_professionale_score = 5;
 	}
